@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ormizrahi12.github.io/misgeret-releases/sitemap.xml

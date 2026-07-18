@@ -198,20 +198,6 @@ body.demo-open{overflow:hidden}
 .mock-bar .dots i{width:9px;height:9px;border-radius:50%;background:#E2DCF2;display:block}
 .mock-bar .dots i:first-child{background:var(--sun)}
 
-/* ---------- real screenshots ---------- */
-.shot{display:block;background:#fff;border:1px solid var(--line-strong);border-radius:20px;box-shadow:var(--sh-md);overflow:hidden;position:relative;transition:transform .3s var(--ease),box-shadow .3s}
-a.shot:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);text-decoration:none}
-.shot .shot-bar{display:flex;align-items:center;justify-content:space-between;background:var(--paper);padding:9px 15px;border-bottom:1px solid var(--line)}
-.shot .shot-bar .name{display:flex;align-items:center;gap:7px;font-weight:800;color:var(--brand-deep);font-size:11.5px}
-.shot .shot-bar .dots{display:flex;gap:5px}
-.shot .shot-bar .dots i{width:8px;height:8px;border-radius:50%;background:#E2DCF2;display:block}
-.shot .shot-bar .dots i:first-child{background:var(--sun)}
-.shot img{display:block;width:100%;height:auto}
-.shot .shot-live{position:absolute;bottom:12px;inset-inline-start:12px;display:inline-flex;align-items:center;gap:7px;background:rgba(25,19,49,.82);color:#fff;backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
-a.shot:hover .shot-live,a.shot:focus-visible .shot-live{opacity:1;transform:none}
-.shot-note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:26px;text-align:center;color:var(--ink-3);font-size:13.5px;font-weight:600}
-.shot-note .cam{color:var(--brand)}
-
 /* ---------- marquee ---------- */
 .marquee-wrap{padding:48px 0 12px}
 .marquee-label{text-align:center;font-size:13.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;margin-bottom:22px}
@@ -249,43 +235,44 @@ a.shot:hover .shot-live,a.shot:focus-visible .shot-live{opacity:1;transform:none
   .pain-card + .pain-card{border-inline-start:none;border-top:1px solid var(--line)}
 }
 
-/* ---------- question rows ---------- */
-.qa-row{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:64px;align-items:center;padding:52px 0}
-.qa-row.flip .qa-text{order:2}
-.qa-row.flip .qa-visual{order:1}
-.qa-num{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;color:var(--brand-deep);letter-spacing:.05em;margin-bottom:14px;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.35);border-radius:999px;padding:5px 14px}
-.qa-text h3{font-size:clamp(25px,3.2vw,36px);font-weight:900;letter-spacing:-.02em;margin-bottom:16px}
-.qa-text .desc{color:var(--ink-2);font-size:17.5px;margin-bottom:24px}
-.qa-text .desc b{color:var(--ink)}
-.qa-feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:13px}
-.qa-feats li{position:relative;padding-inline-start:24px;color:var(--ink-2);font-size:15.5px}
-.qa-feats li b{color:var(--ink)}
-.qa-feats li::before{content:'';position:absolute;inset-inline-start:0;top:9px;width:9px;height:9px;border-radius:3px;background:var(--sun)}
-.qa-live{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;font-size:15px}
-
-/* ---------- product tour (night showcase) ---------- */
-.tour-panel{background:var(--night);border-radius:40px;padding:76px 64px 68px;color:var(--night-ink);box-shadow:var(--sh-lg);position:relative;overflow:hidden}
-.tour-panel::before{content:'';position:absolute;width:720px;height:720px;border-radius:50%;background:rgba(159,127,255,.16);filter:blur(90px);top:-300px;inset-inline-start:-180px;pointer-events:none}
-.tour-panel::after{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(255,184,77,.09);filter:blur(90px);bottom:-240px;inset-inline-end:-150px;pointer-events:none}
-.tour-panel>*{position:relative;z-index:1}
-.tour-panel .section-head{margin-bottom:44px}
-.tour-panel .kicker{background:rgba(159,127,255,.12);border-color:rgba(159,127,255,.3);color:var(--night-lav)}
-.tour-panel h2{color:#fff}
-.tour-panel .sub{color:var(--night-ink-2)}
-.tour-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:34px}
-.tour-tab{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);color:var(--night-ink-2);border:1px solid rgba(159,127,255,.22);border-radius:999px;padding:10px 20px;font-family:var(--font);font-weight:700;font-size:14.5px;cursor:pointer;transition:background .18s,color .18s,border-color .18s,transform .18s}
-.tour-tab:hover{background:rgba(159,127,255,.14);color:#fff;transform:translateY(-1px)}
-.tour-tab[aria-selected="true"]{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 10px 26px -10px rgba(91,43,224,.7)}
-.tour-stage{max-width:980px;margin:0 auto}
-.tour-shot{display:block;border-radius:20px;overflow:hidden;border:1px solid rgba(159,127,255,.3);box-shadow:0 30px 90px -30px rgba(0,0,0,.7);background:#fff}
-.tour-shot img{display:block;width:100%;height:auto}
-.tour-cap{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:26px;flex-wrap:wrap}
-.tour-cap p{color:var(--night-ink-2);font-size:16px;max-width:62ch}
-.tour-cap p b{color:var(--night-ink)}
-.tour-cap .btn-ghost{background:transparent;color:var(--night-lav);border-color:rgba(159,127,255,.4)}
-.tour-cap .btn-ghost:hover{background:rgba(159,127,255,.12)}
-.tour-real{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:30px;color:var(--night-ink-2);font-size:13.5px;font-weight:600}
-.tour-real .cam{color:var(--night-sun)}
+/* ---------- the journey — the whole app, tab by tab, one scroll ---------- */
+.journey{background:var(--night);color:var(--night-ink);padding:110px 0 84px;position:relative;overflow:clip}
+.journey::before{content:'';position:absolute;width:760px;height:760px;border-radius:50%;background:rgba(159,127,255,.14);filter:blur(100px);top:-280px;inset-inline-start:-200px;pointer-events:none}
+.journey::after{content:'';position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(255,184,77,.08);filter:blur(100px);bottom:-220px;inset-inline-end:-160px;pointer-events:none}
+.journey>.container{position:relative;z-index:1}
+.journey .section-head{margin-bottom:16px}
+.journey .kicker{background:rgba(159,127,255,.12);border-color:rgba(159,127,255,.3);color:var(--night-lav)}
+.journey h2{color:#fff}
+.journey .sub{color:var(--night-ink-2)}
+.jr-grid{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:64px;align-items:start}
+.jr-step{min-height:74vh;display:flex;flex-direction:column;justify-content:center;padding:36px 0;opacity:.22;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.jr-step.active{opacity:1;transform:none}
+.jr-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-weight:800;font-size:12.5px;color:#3A2400;letter-spacing:.04em;margin-bottom:16px;background:var(--sun);border-radius:999px;padding:5px 14px}
+.jr-step h3{font-size:clamp(26px,3.1vw,38px);font-weight:900;color:#fff;letter-spacing:-.02em;margin-bottom:14px}
+.jr-step .desc{color:var(--night-ink-2);font-size:17px;margin-bottom:22px;max-width:46ch}
+.jr-step .desc b{color:var(--night-ink)}
+.jr-feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.jr-feats li{position:relative;padding-inline-start:24px;color:var(--night-ink-2);font-size:15px}
+.jr-feats li b{color:var(--night-ink)}
+.jr-feats li::before{content:'';position:absolute;inset-inline-start:0;top:8px;width:9px;height:9px;border-radius:3px;background:var(--sun)}
+.jr-golive{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;font-size:15px;color:var(--night-lav)}
+.jr-visual{position:sticky;top:96px}
+.jr-frame{background:var(--night-2);border:1px solid rgba(159,127,255,.32);border-radius:22px;overflow:hidden;box-shadow:0 44px 120px -38px rgba(0,0,0,.8)}
+.jr-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;background:rgba(159,127,255,.08);border-bottom:1px solid rgba(159,127,255,.18)}
+.jr-bar .name{display:flex;align-items:center;gap:8px;font-weight:800;color:#fff;font-size:12.5px;min-width:0}
+.jr-bar .name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jr-bar .dots{display:flex;gap:5px;flex:none}
+.jr-bar .dots i{width:9px;height:9px;border-radius:50%;background:rgba(159,127,255,.35);display:block}
+.jr-bar .dots i:first-child{background:var(--sun)}
+.jr-imgs{position:relative;background:#fff}
+.jr-imgs img{display:block;width:100%;height:auto;opacity:0;transition:opacity .55s var(--ease)}
+.jr-imgs img + img{position:absolute;inset:0}
+.jr-imgs img.on{opacity:1}
+.jr-under{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;flex-wrap:wrap}
+.jr-real{display:flex;align-items:center;gap:8px;color:var(--night-ink-2);font-size:13px;font-weight:600}
+.jr-real .cam{color:var(--night-sun)}
+.jr-under .btn-ghost{background:transparent;color:var(--night-lav);border-color:rgba(159,127,255,.4)}
+.jr-under .btn-ghost:hover{background:rgba(159,127,255,.12)}
 
 /* ---------- capability wall ---------- */
 .cap-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 44px}
@@ -421,11 +408,16 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 .footer-links a{color:var(--ink-2);font-weight:600}
 .footer-legal{width:100%;margin-top:16px;font-size:13px}
 
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
-.reveal.in{opacity:1;transform:none}
+/* ---------- progressive reveal + scroll progress ---------- */
+#scrollProgress{position:fixed;top:0;inset-inline-start:0;width:0;height:3px;background:linear-gradient(90deg,var(--sun),var(--lav),var(--brand));z-index:260;pointer-events:none}
+.reveal{opacity:0;transform:translateY(30px) scale(.985);filter:blur(7px);transition:opacity .85s var(--ease),transform .85s var(--ease),filter .85s var(--ease)}
+.reveal.in{opacity:1;transform:none;filter:none}
+.pain-card.reveal:nth-child(2),.cap-col.reveal:nth-child(2),.step.reveal:nth-child(2){transition-delay:.12s}
+.pain-card.reveal:nth-child(3),.cap-col.reveal:nth-child(3),.step.reveal:nth-child(3){transition-delay:.24s}
+.cap-col.reveal:nth-child(4){transition-delay:.36s}
 @media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
+  .reveal{opacity:1;transform:none;filter:none;transition:none}
+  #scrollProgress{display:none}
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
 
@@ -434,15 +426,15 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 @media (max-width:1020px){
   .hero-grid{grid-template-columns:1fr;gap:56px}
   .hero-visual .peep-hello{display:none}
-  .qa-row,.qa-row.flip{grid-template-columns:1fr;gap:36px;padding:40px 0}
-  .qa-row.flip .qa-text{order:1}
-  .qa-row.flip .qa-visual{order:2}
+  .jr-grid{grid-template-columns:1fr;gap:0}
+  .jr-visual{order:-1;position:sticky;top:78px;z-index:5}
+  .jr-under{display:none}
+  .jr-step{min-height:60vh;padding:46px 0 26px}
   .privacy-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .conn-head{grid-template-columns:1fr;text-align:center}
   .conn-head .section-head{text-align:center}
   .conn-head .scene{display:none}
-  .tour-panel{padding:60px 40px 56px}
 }
 @media (max-width:680px){
   body{font-size:16.5px;line-height:1.8}
@@ -464,13 +456,12 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   .stats{grid-template-columns:1fr 1fr;padding:6px 18px}
   .stat{padding:26px 10px}
   .stat:nth-child(3){border-inline-start:none}
-  .qa-row,.qa-row.flip{gap:30px;padding:34px 0}
-  .qa-text .desc{font-size:16.5px}
-  .tour-panel{padding:52px 22px 48px;border-radius:30px}
-  .tour-tabs{gap:7px;margin-bottom:28px}
-  .tour-tab{padding:9px 15px;font-size:13.5px}
-  .tour-cap{justify-content:center;text-align:center}
-  .tour-cap .btn{width:100%}
+  .journey{padding:76px 0 60px}
+  .jr-visual{top:70px}
+  .jr-step{min-height:56vh}
+  .jr-step .desc{font-size:16px}
+  .jr-under{justify-content:center;text-align:center}
+  .jr-under .btn{width:100%}
   .steps,.dedup-strip{grid-template-columns:1fr}
   .steps{gap:34px}
   .privacy-panel{padding:52px 26px;border-radius:30px}
@@ -485,6 +476,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 </head>
 <body>
 <a class="skip-link" href="#main">דלג לתוכן</a>
+<div id="scrollProgress" aria-hidden="true"></div>
 <div id="demoBackdrop" aria-hidden="true"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -523,8 +515,8 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
       <span class="brand-name">מסגרת</span>
     </a>
     <nav class="main-nav" aria-label="ניווט ראשי">
-      <a href="#questions">היכולות</a>
-      <a href="#tour">סיור בתוכנה</a>
+      <a href="#journey">המסע בתוכנה</a>
+      <a href="#more">היכולות</a>
       <a href="#connections">בנקים</a>
       <a href="#privacy">פרטיות</a>
       <a href="#faq">שאלות</a>
@@ -553,7 +545,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
           <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           הורדה חינם ל‑Windows
         </a>
-        <a class="btn btn-ghost btn-xl" href="#questions">איך זה עובד? <svg class="isvg" width="18" height="18" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a class="btn btn-ghost btn-xl" href="#journey">איך זה עובד? <svg class="isvg" width="18" height="18" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
       </div>
       <div class="hero-proof">
         <div class="proof-stack" aria-hidden="true">
@@ -658,118 +650,126 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   </div>
 </section>
 
-<!-- ============================ QUESTION TABS — real screenshots ============================ -->
-<section id="questions" aria-labelledby="questions-title" style="padding-top:44px">
+<!-- ============================ THE JOURNEY — every tab, one scroll ============================ -->
+<section id="journey" class="journey" aria-labelledby="journey-title">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">בפנים</span>
-      <h2 id="questions-title">שלוש שאלות. שלושה מסכים.</h2>
-      <p class="sub">המסכים נקראים כמו השאלות שאתה באמת שואל את עצמך — וכל תמונה כאן היא צילום אמיתי מהתוכנה.</p>
+      <span class="kicker">המסע בתוכנה</span>
+      <h2 id="journey-title">שש שאלות. שישה מסכים.<br><span style="color:var(--night-sun)">גלילה אחת.</span></h2>
+      <p class="sub">גלול — והתוכנה תעבור איתך טאב אחרי טאב, בדיוק כמו בתפריט האמיתי שלה. כל מסך כאן הוא צילום אמיתי מהתוכנה.</p>
     </div>
+    <div class="jr-grid">
+      <div class="jr-steps">
 
-    <!-- Q1 -->
-    <div class="qa-row reveal">
-      <div class="qa-text">
-        <span class="qa-num">שאלה 1</span>
-        <h3>״איך אני החודש?״</h3>
-        <p class="desc">
-          מספר אחד ברור: <b>כמה מותר להוציא עד סוף החודש</b> — אחרי הקבועות שעוד ירדו והחיסכון שתכננת.
-        </p>
-        <ul class="qa-feats">
-          <li><b>נכנס ← יצא ← נותר ביד</b>, מול אותה נקודה בחודש שעבר</li>
-          <li><b>לאן הכסף הולך</b> — כל קטגוריה נפתחת עד העסקה הבודדת</li>
-          <li><b>״מה דורש אותך״</b> — עד 3 התראות חכמות. שקט = הכל תקין</li>
-        </ul>
-        <a class="qa-live" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
-      </div>
-      <div class="qa-visual">
-        <a class="shot" href="demo/#/month" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳איך אני החודש׳ בדמו החי">
-          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>איך אני החודש?</span><span class="dots"><i></i><i></i><i></i></span></span>
-          <img src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: זרימת החודש — נכנסו 24,250 ₪, יצאו 14,042 ₪, נותרו ביד 10,208 ₪, ונשאר להוציא בבטחה 8,408 ₪">
-          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
-        </a>
-      </div>
-    </div>
+        <div class="jr-step" data-tab="month" data-label="איך אני החודש?">
+          <span class="jr-tag">שאלה 1 · הטאב הראשון</span>
+          <h3>״איך אני החודש?״</h3>
+          <p class="desc">
+            מספר אחד ברור: <b>כמה מותר להוציא עד סוף החודש</b> — אחרי הקבועות שעוד ירדו והחיסכון שתכננת.
+          </p>
+          <ul class="jr-feats">
+            <li><b>נכנס ← יצא ← נותר ביד</b>, מול אותה נקודה בחודש שעבר</li>
+            <li><b>לאן הכסף הולך</b> — כל קטגוריה נפתחת עד העסקה הבודדת</li>
+            <li><b>״מה דורש אותך״</b> — עד 3 התראות חכמות. שקט = הכל תקין</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
 
-    <!-- Q2 -->
-    <div class="qa-row flip reveal">
-      <div class="qa-text">
-        <span class="qa-num">שאלה 2</span>
-        <h3>״איך אני בכללי?״</h3>
-        <p class="desc">
-          מבט על חודשים ושנים: <b>כמה באמת נשאר בצד כל חודש</b> — מול הממוצע שלך, ומול החציון הישראלי.
-        </p>
-        <ul class="qa-feats">
-          <li><b>פסק־דין במשפט:</b> ״בממוצע נשאר לך בצד ‎₪8,355‎ בחודש״</li>
-          <li><b>הכנסות מול הוצאות</b> — שיעור החיסכון שלך, באחוזים ובשקלים</li>
-          <li><b>רצפים וחריגים:</b> אילו חודשים היו בפלוס, ומה שבר את הרצף</li>
-        </ul>
-        <a class="qa-live" href="demo/#/overview" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
-      </div>
-      <div class="qa-visual">
-        <a class="shot" href="demo/#/overview" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳איך אני בכללי׳ בדמו החי">
-          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>איך אני בכללי?</span><span class="dots"><i></i><i></i><i></i></span></span>
-          <img src="shots/overview.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: בממוצע נשארים בצד 8,355 ₪ בחודש — 37% חיסכון, עם גרף כמה נשאר כל חודש">
-          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
-        </a>
-      </div>
-    </div>
+        <div class="jr-step" data-tab="overview" data-label="איך אני בכללי?">
+          <span class="jr-tag">שאלה 2 · הטאב השני</span>
+          <h3>״איך אני בכללי?״</h3>
+          <p class="desc">
+            מבט על חודשים ושנים: <b>כמה באמת נשאר בצד כל חודש</b> — מול הממוצע שלך, ומול החציון הישראלי.
+          </p>
+          <ul class="jr-feats">
+            <li><b>פסק־דין במשפט:</b> ״בממוצע נשאר לך בצד ‎₪8,355‎ בחודש״</li>
+            <li><b>הכנסות מול הוצאות</b> — שיעור החיסכון שלך, באחוזים ובשקלים</li>
+            <li><b>רצפים וחריגים:</b> אילו חודשים היו בפלוס, ומה שבר את הרצף</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/overview" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
 
-    <!-- Q3 -->
-    <div class="qa-row reveal">
-      <div class="qa-text">
-        <span class="qa-num">שאלה 3</span>
-        <h3>״ומה לגבי העתיד?״</h3>
-        <p class="desc">
-          תחזית עד שנה קדימה, בנויה מהלוח האמיתי שלך <b>ומכוילת מול מה שבאמת קרה.</b> כל מספר ניתן לביקורת.
-        </p>
-        <ul class="qa-feats">
-          <li><b>נקודת השפל בדרך</b> — מתי, וכמה קרוב למסגרת האשראי</li>
-          <li><b>״מה אם...״</b> — שינוי הכנסה או הוצאה חד־פעמית, חי על הגרף</li>
-          <li><b>אבני דרך:</b> מתי כל יעד חיסכון יושג בקצב הנוכחי</li>
-        </ul>
-        <a class="qa-live" href="demo/#/future" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
-      </div>
-      <div class="qa-visual">
-        <a class="shot" href="demo/#/future" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳ומה לגבי העתיד׳ בדמו החי">
-          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>ומה לגבי העתיד?</span><span class="dots"><i></i><i></i><i></i></span></span>
-          <img src="shots/future.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: צפי יתרה של כ-23,000 ₪ בעוד 60 יום, גרף תחזית עם נקודת שפל, תרחישי מה-אם ואבני דרך">
-          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
-        </a>
-      </div>
-    </div>
+        <div class="jr-step" data-tab="future" data-label="ומה לגבי העתיד?">
+          <span class="jr-tag">שאלה 3 · מבט קדימה</span>
+          <h3>״ומה לגבי העתיד?״</h3>
+          <p class="desc">
+            תחזית עד שנה קדימה, בנויה מהלוח האמיתי שלך <b>ומכוילת מול מה שבאמת קרה.</b> כל מספר ניתן לביקורת.
+          </p>
+          <ul class="jr-feats">
+            <li><b>נקודת השפל בדרך</b> — מתי, וכמה קרוב למסגרת האשראי</li>
+            <li><b>״מה אם...״</b> — שינוי הכנסה או הוצאה חד־פעמית, חי על הגרף</li>
+            <li><b>אבני דרך:</b> מתי כל יעד חיסכון יושג בקצב הנוכחי</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/future" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
 
-    <p class="shot-note reveal"><svg class="isvg cam" width="17" height="17" aria-hidden="true"><use href="#i-camera"/></svg>כל הצילומים בעמוד הזה הם צילומי מסך אמיתיים של התוכנה, עם נתוני הדמו שרצים גם כאן למעלה.</p>
-  </div>
-</section>
+        <div class="jr-step" data-tab="savings" data-label="חיסכונות">
+          <span class="jr-tag">שאלה 4 · חיסכונות</span>
+          <h3>״כמה כבר שמתי בצד?״</h3>
+          <p class="desc">
+            יעדים חיים בתוך התזרים: <b>ההפקדה המתוכננת יורדת מ״נשאר להוציא״</b> — החיסכון קודם, לא מה שנשאר במקרה.
+          </p>
+          <ul class="jr-feats">
+            <li><b>יעד, קצב חודשי וצפי הגעה</b> — ״עוד ‎11 חוד׳‎ ליעד״, מחושב באמת</li>
+            <li><b>גם חיסכון מחוץ לעו״ש</b> — קרן חירום חיצונית נספרת בהון</li>
+            <li><b>הפקדות ומשיכות מתועדות</b> — כל תנועה נרשמת, בלחיצה</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/savings" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
 
-<!-- ============================ PRODUCT TOUR ============================ -->
-<section id="tour" aria-labelledby="tour-title" style="padding-top:24px">
-  <div class="container">
-    <div class="tour-panel reveal">
-      <div class="section-head">
-        <span class="kicker">סיור מודרך</span>
-        <h2 id="tour-title">כל התוכנה, מסך אחרי מסך</h2>
-        <p class="sub">שישה מסכים — בדיוק כמו בתפריט האמיתי של מסגרת. בחר מסך, ראה אותו באמת.</p>
+        <div class="jr-step" data-tab="health" data-label="בריאות פיננסית">
+          <span class="jr-tag">שאלה 5 · בריאות</span>
+          <h3>״עד כמה אני יציב באמת?״</h3>
+          <p class="desc">
+            12 מדדים לפי ספי המקצוע, בשני צירים — <b>רמה ועמידות</b> — וכל חישוב מוסבר עד הסוף. בלי ציונים סודיים.
+          </p>
+          <ul class="jr-feats">
+            <li><b>כרית חירום בחודשים</b> — כמה זמן תחזיק בלי הכנסה</li>
+            <li><b>מפת מדדים אחת</b> — ירוק, כתום או אדום. רואים הכל במבט</li>
+            <li><b>לחיצה על כל מדד</b> — הגרף, הסף וההסבר המלא מאחוריו</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/health" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
+
+        <div class="jr-step" data-tab="networth" data-label="הון">
+          <span class="jr-tag">שאלה 6 · הון</span>
+          <h3>״ומה אני שווה, בסך הכל?״</h3>
+          <p class="desc">
+            השווי הנקי האמיתי שלך — <b>כולל מה שאין בסנכרון:</b> פיקדונות, הלוואות, ניירות ערך, גם במטבע זר.
+          </p>
+          <ul class="jr-feats">
+            <li><b>הרכב ההון</b> — מה נזיל עכשיו ומה נעול, בשקלים ובאחוזים</li>
+            <li><b>ההון לאורך זמן, בשכבות</b> — רואים את השווי נבנה חודש אחרי חודש</li>
+            <li><b>אתה מאשר, היא כותבת</b> — עדכוני יתרות ידניים, עם היסטוריה</li>
+          </ul>
+          <a class="jr-golive" href="demo/#/networth" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
+        </div>
+
       </div>
-      <div class="tour-tabs" role="tablist" aria-label="מסכי התוכנה">
-        <button class="tour-tab" role="tab" aria-selected="true" data-tour="month">איך אני החודש?</button>
-        <button class="tour-tab" role="tab" aria-selected="false" data-tour="overview">איך אני בכללי?</button>
-        <button class="tour-tab" role="tab" aria-selected="false" data-tour="future">ומה לגבי העתיד?</button>
-        <button class="tour-tab" role="tab" aria-selected="false" data-tour="savings">חיסכונות</button>
-        <button class="tour-tab" role="tab" aria-selected="false" data-tour="health">בריאות</button>
-        <button class="tour-tab" role="tab" aria-selected="false" data-tour="networth">הון</button>
-      </div>
-      <div class="tour-stage">
-        <a class="tour-shot" id="tourShotLink" href="demo/#/month" target="_blank" rel="noopener">
-          <img id="tourShotImg" src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: מסך ׳איך אני החודש׳">
-        </a>
-        <div class="tour-cap">
-          <p id="tourCap"><b>איך אני החודש?</b> — זרימת הכסף של החודש, לאן הוא הולך, וכמה מותר עוד להוציא בבטחה. עם התראות רק כשמשהו באמת דורש אותך.</p>
-          <a class="btn btn-ghost btn-sm" id="tourLive" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך חי ↗</a>
+
+      <div class="jr-visual reveal">
+        <div class="jr-frame">
+          <div class="jr-bar">
+            <span class="name">
+              <svg width="14" height="14" viewBox="0 0 96 96" aria-hidden="true"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#9F7FFF" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>
+              מסגרת · <span id="jrLabel">איך אני החודש?</span>
+            </span>
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="jr-imgs" aria-live="polite">
+            <img class="on" src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: זרימת החודש — נכנסו 24,250 ₪, יצאו 14,042 ₪, נותרו ביד 10,208 ₪, ונשאר להוציא בבטחה 8,408 ₪">
+            <img src="shots/overview.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: בממוצע נשארים בצד 8,355 ₪ בחודש — 37% חיסכון">
+            <img src="shots/future.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: צפי יתרה של כ-23,000 ₪ בעוד 60 יום, נקודת שפל ותרחישי מה-אם">
+            <img src="shots/savings.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: יעדי חיסכון עם התקדמות באחוזים וצפי הגעה">
+            <img src="shots/health.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: בריאות פיננסית — מצב כללי ׳בריא׳ ומפת 12 מדדים">
+            <img src="shots/networth.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: שווי נקי, הרכב נכסים ונזילות לאורך זמן">
+          </div>
+        </div>
+        <div class="jr-under">
+          <span class="jr-real"><svg class="isvg cam" width="16" height="16" aria-hidden="true"><use href="#i-camera"/></svg>צילומי מסך אמיתיים, לא הדמיות</span>
+          <a class="btn btn-ghost btn-sm" id="jrLive" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
         </div>
       </div>
-      <p class="tour-real"><svg class="isvg cam" width="16" height="16" aria-hidden="true"><use href="#i-camera"/></svg>צילומי מסך אמיתיים, לא הדמיות — מה שרואים כאן זה מה שמקבלים.</p>
     </div>
   </div>
 </section>
@@ -1226,8 +1226,8 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
       מסגרת
     </span>
     <nav class="footer-links" aria-label="קישורי פוטר">
-      <a href="#questions">היכולות</a>
-      <a href="#tour">סיור בתוכנה</a>
+      <a href="#journey">המסע בתוכנה</a>
+      <a href="#more">היכולות</a>
       <a href="#privacy">פרטיות</a>
       <a href="#faq">שאלות ותשובות</a>
       <a href="https://github.com/OrMizrahi12/misgeret-releases/releases" rel="noopener">כל הגרסאות</a>
@@ -1272,6 +1272,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   var demoExpand = document.getElementById('demoExpand');
   var backdrop = document.getElementById('demoBackdrop');
   function setExpanded(on){
+    demoFrame.style.transform = '';
     demoFrame.classList.toggle('expanded', on);
     document.body.classList.toggle('demo-open', on);
     demoExpand.setAttribute('aria-pressed', String(on));
@@ -1285,37 +1286,48 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
     });
   }
 
-  /* product tour: swap the real screenshot per tab */
-  var TOUR = {
-    month:    { cap: '<b>איך אני החודש?</b> — זרימת הכסף של החודש, לאן הוא הולך, וכמה מותר עוד להוציא בבטחה. עם התראות רק כשמשהו באמת דורש אותך.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳איך אני החודש׳ — זרימת החודש, קטגוריות ונשאר להוציא' },
-    overview: { cap: '<b>איך אני בכללי?</b> — הממוצע האמיתי שלך: כמה נכנס, כמה יוצא, כמה נשאר בצד כל חודש — ומה המגמה לאורך זמן.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳איך אני בכללי׳ — ממוצע חודשי ושיעור חיסכון' },
-    future:   { cap: '<b>ומה לגבי העתיד?</b> — צפי היתרה קדימה על הלוח האמיתי שלך, נקודת השפל, תרחישי ״מה אם״ ואבני דרך ליעדים.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳ומה לגבי העתיד׳ — תחזית יתרה ותרחישים' },
-    savings:  { cap: '<b>חיסכונות</b> — יעדים עם קצב חודשי, התקדמות באחוזים וצפי הגעה. ההפקדה המתוכננת יורדת מ״נשאר להוציא״ — החיסכון קודם.', alt: 'צילום מסך אמיתי של מסגרת: מסך החיסכונות — יעדים, התקדמות והפקדות' },
-    health:   { cap: '<b>בריאות</b> — 12 מדדים לפי ספי המקצוע: רמה ועמידות, כל חישוב מוסבר עד הסוף. בלי ציונים סודיים.', alt: 'צילום מסך אמיתי של מסגרת: מסך הבריאות הפיננסית — מצב כללי ׳בריא׳ ומפת מדדים' },
-    networth: { cap: '<b>הון</b> — השווי הנקי האמיתי: עו״ש, פיקדונות, תוכניות חיסכון והלוואות — כולל מה שאין בסנכרון, לאורך זמן.', alt: 'צילום מסך אמיתי של מסגרת: מסך ההון — שווי נקי, הרכב הנכסים ונזילות' }
-  };
-  var tabs = document.querySelectorAll('.tour-tab');
-  var img = document.getElementById('tourShotImg');
-  var link = document.getElementById('tourShotLink');
-  var live = document.getElementById('tourLive');
-  var cap = document.getElementById('tourCap');
-  tabs.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      var key = tab.getAttribute('data-tour');
-      tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t === tab)); });
-      img.src = 'shots/' + key + '.png';
-      img.alt = TOUR[key].alt;
-      link.href = 'demo/#/' + key;
-      live.href = 'demo/#/' + key;
-      cap.innerHTML = TOUR[key].cap;
-    });
-  });
-  /* preload the tour screenshots once idle, so switching is instant */
-  var preload = function(){
-    Object.keys(TOUR).forEach(function(key){ var i = new Image(); i.src = 'shots/' + key + '.png'; });
-  };
-  if ('requestIdleCallback' in window) requestIdleCallback(preload, { timeout: 4000 });
-  else setTimeout(preload, 2500);
+  /* the journey: scrolling drives the app through its tabs */
+  var jrSteps = [].slice.call(document.querySelectorAll('.jr-step'));
+  var jrImgs = [].slice.call(document.querySelectorAll('.jr-imgs img'));
+  var jrLabel = document.getElementById('jrLabel');
+  var jrLive = document.getElementById('jrLive');
+  var jrCurrent = -1;
+  function jrActivate(i){
+    if (i === jrCurrent || !jrSteps[i]) return;
+    jrCurrent = i;
+    jrSteps.forEach(function(s, k){ s.classList.toggle('active', k === i); });
+    jrImgs.forEach(function(im, k){ im.classList.toggle('on', k === i); });
+    jrLabel.textContent = jrSteps[i].getAttribute('data-label');
+    jrLive.href = 'demo/#/' + jrSteps[i].getAttribute('data-tab');
+  }
+  if (jrSteps.length) {
+    if ('IntersectionObserver' in window) {
+      var jrIO = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) jrActivate(jrSteps.indexOf(e.target));
+        });
+      }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+      jrSteps.forEach(function(s){ jrIO.observe(s); });
+    }
+    jrActivate(0);
+  }
+
+  /* scroll progress bar + a touch of hero depth */
+  var progress = document.getElementById('scrollProgress');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking = false;
+  function onFrame(){
+    ticking = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    if (!reduced && window.innerWidth >= 1020 && demoFrame && !demoFrame.classList.contains('expanded')) {
+      demoFrame.style.transform = 'translateY(' + Math.min(window.scrollY * 0.06, 70) + 'px)';
+    }
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; requestAnimationFrame(onFrame); }
+  }, { passive: true });
+  onFrame();
 })();
 </script>
 </body>

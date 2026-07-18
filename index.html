@@ -56,137 +56,126 @@
 </script>
 
 <style>
-/* ================= מסגרת · marketing v2 · light · Heebo ================= */
+/* ================= מסגרת · marketing v5 · סגול־שמש · Heebo ================= */
 :root{
-  --bg:#FBFAF6; --paper:#FAF7F0; --surface:#FFFFFF; --surface-2:#F4F1E9; --wash:#F1EADB;
-  --ink:#17211F; --ink-2:#57655F; --ink-3:#93A09A;
-  --petrol:#5B2BE0; --petrol-deep:#4318C9; --teal:#8B66FF;
+  --bg:#FBFAFE; --paper:#F6F3FE; --surface:#FFFFFF; --surface-2:#F1ECFB;
+  --ink:#191331; --ink-2:#544D6E; --ink-3:#8F89A6;
+  --brand:#5B2BE0; --brand-deep:#4318C9; --brand-ink:#2A1070; --lav:#8B66FF;
   --sun:#FFB020; --sun-deep:#B26A00;
   --good:#177E57; --bad:#C0442E;
-  --c1:#8B66FF; --c2:#B26A00; --c3:#9257B5; --c4:#C94F35; --c5:#3D6EC0; --c6:#4F8A3D;
-  --line:rgba(67,24,201,.12); --line-strong:rgba(67,24,201,.24);
-  --r-lg:24px; --r-md:18px; --r-sm:12px;
-  --sh-sm:0 1px 2px rgba(23,33,31,.05);
-  --sh-md:0 1px 3px rgba(23,33,31,.05), 0 14px 34px -20px rgba(91,43,224,.18);
-  --sh-lg:0 2px 4px rgba(23,33,31,.05), 0 30px 70px -32px rgba(91,43,224,.25);
-  --glow:0 6px 20px -8px rgba(91,43,224,.35);
+  --line:rgba(91,43,224,.13); --line-strong:rgba(91,43,224,.26);
+  --r-lg:28px; --r-md:20px; --r-sm:12px;
+  --sh-sm:0 1px 2px rgba(25,19,49,.06);
+  --sh-md:0 1px 3px rgba(25,19,49,.05), 0 16px 40px -22px rgba(91,43,224,.28);
+  --sh-lg:0 2px 4px rgba(25,19,49,.05), 0 36px 90px -36px rgba(91,43,224,.38);
+  --glow:0 8px 26px -10px rgba(91,43,224,.5);
   --font:'Heebo','Segoe UI',system-ui,sans-serif;
   --ease:cubic-bezier(0.22,0.9,0.3,1);
-  --grad:linear-gradient(120deg,#5B2BE0,#8B66FF);
-  --night:#0F0A1C; --night-2:#181128; --night-3:#221838;
-  --night-ink:#F0EDF8; --night-ink-2:#A79FBE; --night-teal:#9F7FFF; --night-sun:#FFB84D;
+  --grad:linear-gradient(120deg,#4318C9,#7A4DFF);
+  --grad-text:linear-gradient(110deg,#4318C9 20%,#8B66FF 85%);
+  --night:#0B0812; --night-2:#161022; --night-3:#221838;
+  --night-ink:#F2F0F7; --night-ink-2:#A79FBE; --night-lav:#9F7FFF; --night-sun:#FFB84D;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 body{
   margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--font);font-size:17px;line-height:1.7;font-weight:400;
+  font-family:var(--font);font-size:17px;line-height:1.75;font-weight:400;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   overflow-x:clip;
 }
-/* minimal: no ambient background */
-
 h1,h2,h3,h4{margin:0;color:var(--ink);line-height:1.22}
 p{margin:0}
-a{color:var(--petrol);text-decoration:none}
+a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 .money{font-variant-numeric:lining-nums tabular-nums}
 .container{max-width:1180px;margin:0 auto;padding:0 28px}
-section{padding:96px 0}
-.section-head{max-width:680px;margin:0 auto 56px;text-align:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;letter-spacing:.06em;color:var(--sun-deep);margin-bottom:16px}
-.kicker::before{content:'';width:13px;height:13px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="%235B2BE0" stroke-width="13" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="11" fill="%23FFB020"/></svg>') center/contain no-repeat}
-.section-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:900;letter-spacing:-.02em;margin-bottom:14px}
-.section-head .sub{color:var(--ink-2);font-size:18.5px;font-weight:400}
-.grad-text{color:var(--petrol)}
+section{padding:104px 0}
+.section-head{max-width:720px;margin:0 auto 60px;text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:800;letter-spacing:.05em;color:var(--brand-deep);background:rgba(91,43,224,.08);border:1px solid rgba(91,43,224,.16);border-radius:999px;padding:7px 16px;margin-bottom:20px}
+.kicker::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 3px rgba(255,176,32,.22)}
+.section-head h2{font-size:clamp(31px,4.6vw,50px);font-weight:900;letter-spacing:-.025em;margin-bottom:16px}
+.section-head .sub{color:var(--ink-2);font-size:19px;font-weight:400}
+.grad-text{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+@supports not (background-clip:text){ .grad-text{color:var(--brand-deep)} }
 
 /* focus & a11y */
 :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
-.skip-link{position:absolute;top:-64px;right:16px;z-index:300;background:var(--petrol);color:#fff;padding:10px 20px;border-radius:0 0 14px 14px;font-weight:700;transition:top .2s var(--ease)}
+.skip-link{position:absolute;top:-64px;right:16px;z-index:400;background:var(--brand);color:#fff;padding:10px 20px;border-radius:0 0 14px 14px;font-weight:700;transition:top .2s var(--ease)}
 .skip-link:focus{top:0;text-decoration:none}
 .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ---------- floating header ---------- */
 .site-header{position:sticky;top:14px;z-index:100;margin:14px auto 0;max-width:1120px;padding:0 16px}
-.header-pill{display:flex;align-items:center;gap:18px;height:62px;padding:0 12px 0 12px;background:rgba(255,255,255,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:999px;box-shadow:var(--sh-sm);transition:box-shadow .25s}
-.site-header.scrolled .header-pill{box-shadow:var(--sh-md)}
+.header-pill{display:flex;align-items:center;gap:18px;height:64px;padding:0 12px;background:rgba(255,255,255,.8);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px;box-shadow:var(--sh-sm);transition:box-shadow .25s,border-color .25s}
+.site-header.scrolled .header-pill{box-shadow:var(--sh-md);border-color:var(--line-strong)}
 .brand{display:flex;align-items:center;gap:10px;padding-inline-start:10px}
 .brand:hover{text-decoration:none}
-.brand-name{font-weight:900;font-size:22px;color:var(--petrol-deep);letter-spacing:-.01em}
+.brand-name{font-weight:900;font-size:22px;color:var(--brand-deep);letter-spacing:-.01em}
 .main-nav{display:flex;gap:2px;margin-inline-start:6px}
 .main-nav a{color:var(--ink-2);font-weight:600;font-size:15px;padding:9px 14px;border-radius:999px;transition:background .16s,color .16s}
-.main-nav a:hover{background:rgba(91,43,224,.07);color:var(--petrol-deep);text-decoration:none}
+.main-nav a:hover{background:rgba(91,43,224,.08);color:var(--brand-deep);text-decoration:none}
 .header-cta{margin-inline-start:auto}
 
 /* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font);font-weight:700;border-radius:999px;cursor:pointer;text-decoration:none;border:none;transition:transform .18s var(--ease),box-shadow .18s,background .18s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font);font-weight:700;border-radius:999px;cursor:pointer;text-decoration:none;border:none;transition:transform .18s var(--ease),box-shadow .18s,background .18s,filter .18s}
 .btn:hover{text-decoration:none}
 .btn:active{transform:translateY(1px) scale(.99)}
-.btn-primary{background:var(--petrol);color:#fff;padding:15px 30px;font-size:17px;box-shadow:var(--glow)}
-.btn-primary:hover{background:var(--petrol-deep);transform:translateY(-1px)}
-.btn-ghost{background:#fff;color:var(--petrol-deep);border:1.5px solid var(--line-strong);padding:14px 28px;font-size:17px}
+.btn-primary{background:var(--grad);color:#fff;padding:15px 30px;font-size:17px;box-shadow:var(--glow)}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(91,43,224,.55)}
+.btn-ghost{background:#fff;color:var(--brand-deep);border:1.5px solid var(--line-strong);padding:14px 28px;font-size:17px}
 .btn-ghost:hover{background:var(--surface-2)}
 .btn-sm{padding:10px 22px;font-size:15px}
 .btn-xl{padding:18px 38px;font-size:19px}
-.cta-note{font-size:14px;color:var(--ink-3);margin-top:14px;font-weight:500}
+.cta-note{font-size:14px;color:var(--ink-3);margin-top:16px;font-weight:500}
 .cta-note b{color:var(--ink-2)}
 
 /* ---------- icon system ---------- */
-.tile{display:grid;place-items:flex-start;color:var(--petrol)}
+.tile{display:grid;place-items:flex-start;color:var(--brand)}
 .tile svg{width:28px;height:28px}
 .isvg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- stats band ---------- */
-.stats-band{margin:64px 0 0;border-block:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto;padding:8px 28px}
-.stat{text-align:center;padding:30px 12px}
-.stat + .stat{border-inline-start:1px solid var(--line)}
-.stat .n{font-weight:900;font-size:clamp(34px,3.6vw,48px);letter-spacing:-.03em;line-height:1.1}
-.stat .l{color:var(--ink-2);font-weight:600;font-size:14.5px;margin-top:4px}
-
-/* ---------- decorative frames ---------- */
-.deco-frame{position:absolute;pointer-events:none;z-index:0}
-.band{border-top:1px solid var(--line)}
-
 /* ---------- hero ---------- */
-.hero{padding:84px 0 30px;overflow:visible;position:relative}
+.hero{padding:88px 0 34px;overflow:visible;position:relative}
+.hero::before{content:'';position:absolute;top:-220px;inset-inline-end:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(91,43,224,.16),transparent 62%);pointer-events:none}
+.hero::after{content:'';position:absolute;top:40px;inset-inline-start:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.14),transparent 60%);pointer-events:none}
+.hero .container{position:relative;z-index:1}
 .hl-wrap{position:relative;display:inline-block}
 .hl-wrap .squig{position:absolute;inset-inline:2%;bottom:-12px;width:96%;height:12px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,47fr) minmax(0,53fr);gap:48px;align-items:center}
-.hero h1{font-size:clamp(38px,5.6vw,66px);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin:22px 0 20px}
-.hero .lead{font-size:20px;color:var(--ink-2);max-width:50ch;margin-bottom:32px;line-height:1.75}
+.hero-grid{display:grid;grid-template-columns:minmax(0,47fr) minmax(0,53fr);gap:52px;align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,68px);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin:24px 0 22px}
+.hero .lead{font-size:20px;color:var(--ink-2);max-width:50ch;margin-bottom:34px;line-height:1.8}
 .hero .lead b{color:var(--ink);font-weight:700}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.hero-proof{display:flex;align-items:center;gap:14px;margin-top:30px}
+.hero-proof{display:flex;align-items:center;gap:14px;margin-top:34px}
 .proof-stack{display:flex;padding-inline-start:8px}
-.proof-stack img,.proof-stack .more{width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 1px 4px rgba(23,33,31,.18);margin-inline-start:-9px;object-fit:contain;padding:4px}
-.proof-stack .more{display:grid;place-items:center;font-size:11.5px;font-weight:800;color:var(--petrol);padding:0;background:var(--surface-2)}
-.hero-proof p{font-size:14px;color:var(--ink-2);font-weight:600;line-height:1.45}
+.proof-stack img,.proof-stack .more{width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 1px 4px rgba(25,19,49,.18);margin-inline-start:-9px;object-fit:contain;padding:4px}
+.proof-stack .more{display:grid;place-items:center;font-size:11.5px;font-weight:800;color:var(--brand);padding:0;background:var(--surface-2)}
+.hero-proof p{font-size:14px;color:var(--ink-2);font-weight:600;line-height:1.5}
 .hero-proof p b{color:var(--ink)}
 
 /* hero visual */
 .hero-visual{position:relative}
-.hero-visual .peep-hello{position:absolute;bottom:-42px;inset-inline-end:-84px;width:148px;z-index:3;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(23,33,31,.14))}
-/* minimal: no floating chips */
+.hero-visual .peep-hello{position:absolute;bottom:-42px;inset-inline-end:-84px;width:148px;z-index:3;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(25,19,49,.14))}
 
-/* ---------- app mockup ---------- */
-.mock{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-md);overflow:hidden;font-size:12.5px;line-height:1.5;position:relative;z-index:2}
-.qa-visual .mock *{pointer-events:none}
+/* ---------- app frame (hero demo) ---------- */
+.mock{background:#fff;border:1px solid var(--line-strong);border-radius:22px;box-shadow:var(--sh-lg);overflow:hidden;font-size:12.5px;line-height:1.5;position:relative;z-index:2}
 
 /* ---------- live demo (hero) — the real app, rendered immediately ---------- */
 .demo-frame{position:relative}
+.demo-frame::before{content:'';position:absolute;inset:-2px;border-radius:24px;background:linear-gradient(135deg,rgba(91,43,224,.55),rgba(255,176,32,.4) 45%,rgba(139,102,255,.55));z-index:1;pointer-events:none;opacity:.9}
 .demo-frame .mock{height:min(74vh,660px);display:flex;flex-direction:column}
 .demo-frame iframe{display:block;width:100%;border:0;flex:1;min-height:0}
-.demo-expand{display:inline-flex;align-items:center;gap:7px;background:var(--petrol);color:#fff;border:none;border-radius:999px;padding:6px 15px;font-family:var(--font);font-weight:700;font-size:12px;cursor:pointer;transition:background .16s,transform .16s}
-.demo-expand:hover{background:var(--petrol-deep);transform:translateY(-1px)}
-#demoBackdrop{position:fixed;inset:0;background:rgba(23,19,31,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:290;opacity:0;pointer-events:none;transition:opacity .25s}
+.demo-expand{display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:6px 15px;font-family:var(--font);font-weight:700;font-size:12px;cursor:pointer;transition:background .16s,transform .16s}
+.demo-expand:hover{background:var(--brand-deep);transform:translateY(-1px)}
+#demoBackdrop{position:fixed;inset:0;background:rgba(17,12,28,.66);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:290;opacity:0;pointer-events:none;transition:opacity .25s}
 body.demo-open #demoBackdrop{opacity:1;pointer-events:auto}
 body.demo-open{overflow:hidden}
 .demo-frame.expanded{position:fixed;inset:min(3vh,26px) min(3vw,34px);z-index:300}
-.demo-frame.expanded .mock{height:100%;box-shadow:0 44px 130px -30px rgba(23,19,31,.6)}
+.demo-frame.expanded .mock{height:100%;box-shadow:0 44px 130px -30px rgba(11,8,18,.66)}
 .demo-frame.expanded .try-callout{display:none}
-@media (max-width:680px){ .demo-frame.expanded{inset:0} .demo-frame.expanded .mock{border-radius:0} }
+@media (max-width:680px){ .demo-frame.expanded{inset:0} .demo-frame.expanded .mock{border-radius:0} .demo-frame.expanded::before{display:none} }
 .live-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(23,126,87,.1);color:var(--good);border:1px solid rgba(23,126,87,.3);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:800}
 .live-chip i{width:8px;height:8px;border-radius:50%;background:var(--good);animation:livePulse 1.6s ease-in-out infinite}
 @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(23,126,87,.45)}50%{box-shadow:0 0 0 6px rgba(23,126,87,0)}}
@@ -194,143 +183,160 @@ body.demo-open{overflow:hidden}
 .try-callout .bubble{background:var(--sun);color:#3A2400;font-weight:800;font-size:15.5px;padding:10px 18px;border-radius:999px;border-end-start-radius:6px;box-shadow:0 10px 30px -10px rgba(184,119,10,.6);white-space:nowrap}
 .try-callout svg{margin-top:26px;flex:none}
 @keyframes calloutBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.demo-links{display:flex;justify-content:center;gap:18px;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--ink-3)}
+.demo-links{display:flex;justify-content:center;gap:18px;margin-top:16px;font-size:13.5px;font-weight:600;color:var(--ink-3);flex-wrap:wrap;text-align:center}
 .demo-links a{font-weight:700}
 @media (max-width:680px){
   .demo-frame .mock{height:76vh}
-  .try-callout{top:-46px;inset-inline-start:0}
+  .mock-bar{flex-wrap:wrap;row-gap:6px}
+  .try-callout{top:-50px;inset-inline-start:0}
   .try-callout .bubble{font-size:13.5px;padding:8px 14px}
 }
 @media (prefers-reduced-motion:reduce){ .try-callout{animation:none} .live-chip i{animation:none} }
-.mock-bar{display:flex;align-items:center;justify-content:space-between;background:var(--paper);padding:10px 16px;border-bottom:1px solid var(--line);font-size:11px;color:var(--ink-3)}
-.mock-bar .name{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--petrol-deep);font-size:12px}
+.mock-bar{display:flex;align-items:center;justify-content:space-between;background:var(--paper);padding:10px 16px;border-bottom:1px solid var(--line);font-size:11px;color:var(--ink-3);gap:8px}
+.mock-bar .name{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--brand-deep);font-size:12px}
 .mock-bar .dots{display:flex;gap:5px}
-.mock-bar .dots i{width:9px;height:9px;border-radius:50%;background:#E5DFD2;display:block}
-.mock-shell{display:grid;grid-template-columns:172px 1fr;min-height:380px}
-.mock-side{background:var(--paper);border-inline-end:1px solid var(--line);padding:14px 9px;display:flex;flex-direction:column;gap:3px}
-.mock-nav{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:11px;color:var(--ink-2);font-weight:600;font-size:11.5px}
-.mock-nav.on{background:#fff;color:var(--petrol-deep);font-weight:800;box-shadow:var(--sh-sm);position:relative}
-.mock-nav.on::before{content:'';position:absolute;inset-inline-start:-9px;top:24%;bottom:24%;width:3.5px;border-radius:99px;background:var(--sun)}
-.mock-side .foot{margin-top:auto;border-top:1px solid var(--line);padding:9px 10px 2px;font-size:9.5px;color:var(--ink-3)}
-.mock-main{padding:16px 18px;background:#fff}
-.mock-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:11px}
-.mock-h .t{font-weight:900;font-size:16px;color:var(--ink)}
-.mock-h .s{font-size:10px;color:var(--ink-3);font-weight:500}
-.mcard{background:var(--bg);border:1px solid var(--line);border-radius:15px;padding:12px 14px}
-.m-label{font-size:10.5px;color:var(--ink-2);font-weight:600}
-.m-big{font-weight:900;font-size:26px;color:var(--petrol-deep);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-.m-big small{font-size:10px;color:var(--ink-2);font-weight:500}
-.m-chip{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:3px 10px;font-size:9.5px;font-weight:700}
-.m-chip.good{background:rgba(23,126,87,.09);color:var(--good);border:1px solid rgba(23,126,87,.25)}
-.m-chip.warn{background:rgba(184,119,10,.09);color:var(--sun-deep);border:1px solid rgba(184,119,10,.28)}
-.m-meter{height:9px;border-radius:999px;background:var(--surface-2);overflow:hidden;display:flex;margin-top:10px}
-.m-meter i{display:block;height:100%}
-.m-meter .used{background:var(--grad);width:0;border-radius:0 999px 999px 0;animation:growW 1.2s var(--ease) .3s forwards}
-.m-meter .gap2{width:2px;background:#fff}
-.m-meter .plan{background:rgba(91,43,224,.25);width:0;animation:growW 1.2s var(--ease) .5s forwards}
-.m-meter-cap{display:flex;justify-content:space-between;font-size:9px;color:var(--ink-3);margin-top:6px;font-weight:500}
-@keyframes growW{to{width:var(--w)}}
-.m-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:9px}
-.m-kpi .v{font-weight:800;font-size:16px;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
-.m-kpi .d{font-size:9px;font-weight:600}
-.up{color:var(--good)} .down{color:var(--bad)}
-.m-flow{display:flex;height:15px;border-radius:8px;overflow:hidden;gap:2px;margin-top:10px}
-.m-flow i{display:block;height:100%;transform-origin:right;animation:growX .9s var(--ease) .4s both}
-@keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.m-legend{display:flex;gap:10px;font-size:9px;color:var(--ink-2);margin-top:8px;flex-wrap:wrap;font-weight:600}
-.m-legend span{display:inline-flex;align-items:center;gap:4px}
-.m-legend i{width:7px;height:7px;border-radius:2.5px;display:inline-block}
+.mock-bar .dots i{width:9px;height:9px;border-radius:50%;background:#E2DCF2;display:block}
+.mock-bar .dots i:first-child{background:var(--sun)}
+
+/* ---------- real screenshots ---------- */
+.shot{display:block;background:#fff;border:1px solid var(--line-strong);border-radius:20px;box-shadow:var(--sh-md);overflow:hidden;position:relative;transition:transform .3s var(--ease),box-shadow .3s}
+a.shot:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);text-decoration:none}
+.shot .shot-bar{display:flex;align-items:center;justify-content:space-between;background:var(--paper);padding:9px 15px;border-bottom:1px solid var(--line)}
+.shot .shot-bar .name{display:flex;align-items:center;gap:7px;font-weight:800;color:var(--brand-deep);font-size:11.5px}
+.shot .shot-bar .dots{display:flex;gap:5px}
+.shot .shot-bar .dots i{width:8px;height:8px;border-radius:50%;background:#E2DCF2;display:block}
+.shot .shot-bar .dots i:first-child{background:var(--sun)}
+.shot img{display:block;width:100%;height:auto}
+.shot .shot-live{position:absolute;bottom:12px;inset-inline-start:12px;display:inline-flex;align-items:center;gap:7px;background:rgba(25,19,49,.82);color:#fff;backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+a.shot:hover .shot-live,a.shot:focus-visible .shot-live{opacity:1;transform:none}
+.shot-note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:26px;text-align:center;color:var(--ink-3);font-size:13.5px;font-weight:600}
+.shot-note .cam{color:var(--brand)}
 
 /* ---------- marquee ---------- */
-.marquee-wrap{padding:44px 0 10px}
-.marquee-label{text-align:center;font-size:13.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;margin-bottom:20px}
+.marquee-wrap{padding:48px 0 12px}
+.marquee-label{text-align:center;font-size:13.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;margin-bottom:22px}
 .marquee{overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .marquee-track{display:flex;gap:14px;width:max-content;animation:scrollX 42s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes scrollX{to{transform:translateX(-50%)}}
-.logo-chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;direction:rtl}
+.logo-chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;direction:rtl}
 .logo-chip img{width:24px;height:24px;object-fit:contain;border-radius:6px}
 @media (prefers-reduced-motion:reduce){
   .marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
   .marquee{mask-image:none;-webkit-mask-image:none}
 }
 
-/* ---------- pains — borderless columns ---------- */
+/* ---------- stats band ---------- */
+.stats-band{margin:68px 0 0;border-block:1px solid var(--line);background:linear-gradient(180deg,rgba(91,43,224,.035),transparent)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto;padding:8px 28px}
+.stat{text-align:center;padding:34px 12px}
+.stat + .stat{border-inline-start:1px solid var(--line)}
+.stat .n{font-weight:900;font-size:clamp(36px,3.8vw,52px);letter-spacing:-.03em;line-height:1.1}
+.stat .l{color:var(--ink-2);font-weight:600;font-size:14.5px;margin-top:6px}
+
+/* ---------- pains ---------- */
 .pain-grid{display:grid;grid-template-columns:repeat(3,1fr)}
 .pain-card{padding:6px 34px}
 .pain-card + .pain-card{border-inline-start:1px solid var(--line)}
 .pain-card .emo{margin-bottom:16px}
 .pain-card p{color:var(--ink-2);font-size:16.5px}
 .pain-card p b{color:var(--ink)}
-.pain-bridge{text-align:center;margin-top:56px;font-weight:900;font-size:clamp(24px,3.2vw,34px);letter-spacing:-.02em}
+.pain-bridge{text-align:center;margin-top:60px;font-weight:900;font-size:clamp(24px,3.2vw,36px);letter-spacing:-.02em}
 @media (max-width:1020px){ .pain-card{padding:6px 22px} }
 @media (max-width:680px){
-  .pain-card{padding:18px 0}
+  .pain-grid{grid-template-columns:1fr}
+  .pain-card{padding:24px 0}
   .pain-card + .pain-card{border-inline-start:none;border-top:1px solid var(--line)}
 }
 
 /* ---------- question rows ---------- */
-.qa-row{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:60px;align-items:center;padding:48px 0}
+.qa-row{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:64px;align-items:center;padding:52px 0}
 .qa-row.flip .qa-text{order:2}
 .qa-row.flip .qa-visual{order:1}
-.qa-num{display:inline-block;font-weight:800;font-size:13px;color:var(--sun-deep);letter-spacing:.06em;margin-bottom:12px}
-.qa-text h3{font-size:clamp(25px,3.2vw,34px);font-weight:900;letter-spacing:-.02em;margin-bottom:16px}
-.qa-text .desc{color:var(--ink-2);font-size:17.5px;margin-bottom:22px}
+.qa-num{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;color:var(--brand-deep);letter-spacing:.05em;margin-bottom:14px;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.35);border-radius:999px;padding:5px 14px}
+.qa-text h3{font-size:clamp(25px,3.2vw,36px);font-weight:900;letter-spacing:-.02em;margin-bottom:16px}
+.qa-text .desc{color:var(--ink-2);font-size:17.5px;margin-bottom:24px}
 .qa-text .desc b{color:var(--ink)}
-.qa-feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.qa-feats{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:13px}
 .qa-feats li{position:relative;padding-inline-start:24px;color:var(--ink-2);font-size:15.5px}
 .qa-feats li b{color:var(--ink)}
 .qa-feats li::before{content:'';position:absolute;inset-inline-start:0;top:9px;width:9px;height:9px;border-radius:3px;background:var(--sun)}
+.qa-live{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;font-size:15px}
 
-/* ---------- capabilities — borderless grid ---------- */
-.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:52px 56px;max-width:1040px;margin:0 auto}
-.bcard{position:relative}
-.bcard .bi{margin-bottom:14px}
-.bcard h3{font-size:18px;font-weight:800;margin-bottom:8px}
-.bcard p{color:var(--ink-2);font-size:15px}
+/* ---------- product tour (night showcase) ---------- */
+.tour-panel{background:var(--night);border-radius:40px;padding:76px 64px 68px;color:var(--night-ink);box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.tour-panel::before{content:'';position:absolute;width:720px;height:720px;border-radius:50%;background:rgba(159,127,255,.16);filter:blur(90px);top:-300px;inset-inline-start:-180px;pointer-events:none}
+.tour-panel::after{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(255,184,77,.09);filter:blur(90px);bottom:-240px;inset-inline-end:-150px;pointer-events:none}
+.tour-panel>*{position:relative;z-index:1}
+.tour-panel .section-head{margin-bottom:44px}
+.tour-panel .kicker{background:rgba(159,127,255,.12);border-color:rgba(159,127,255,.3);color:var(--night-lav)}
+.tour-panel h2{color:#fff}
+.tour-panel .sub{color:var(--night-ink-2)}
+.tour-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:34px}
+.tour-tab{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);color:var(--night-ink-2);border:1px solid rgba(159,127,255,.22);border-radius:999px;padding:10px 20px;font-family:var(--font);font-weight:700;font-size:14.5px;cursor:pointer;transition:background .18s,color .18s,border-color .18s,transform .18s}
+.tour-tab:hover{background:rgba(159,127,255,.14);color:#fff;transform:translateY(-1px)}
+.tour-tab[aria-selected="true"]{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 10px 26px -10px rgba(91,43,224,.7)}
+.tour-stage{max-width:980px;margin:0 auto}
+.tour-shot{display:block;border-radius:20px;overflow:hidden;border:1px solid rgba(159,127,255,.3);box-shadow:0 30px 90px -30px rgba(0,0,0,.7);background:#fff}
+.tour-shot img{display:block;width:100%;height:auto}
+.tour-cap{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:26px;flex-wrap:wrap}
+.tour-cap p{color:var(--night-ink-2);font-size:16px;max-width:62ch}
+.tour-cap p b{color:var(--night-ink)}
+.tour-cap .btn-ghost{background:transparent;color:var(--night-lav);border-color:rgba(159,127,255,.4)}
+.tour-cap .btn-ghost:hover{background:rgba(159,127,255,.12)}
+.tour-real{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:30px;color:var(--night-ink-2);font-size:13.5px;font-weight:600}
+.tour-real .cam{color:var(--night-sun)}
+
+/* ---------- capability wall ---------- */
+.cap-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 44px}
+.cap-col .ci{width:50px;height:50px;border-radius:15px;background:rgba(91,43,224,.09);border:1px solid rgba(91,43,224,.16);display:grid;place-items:center;color:var(--brand);margin-bottom:18px}
+.cap-col .ci svg{width:24px;height:24px}
+.cap-col h3{font-size:19px;font-weight:800;margin-bottom:14px}
+.cap-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
+.cap-col li{position:relative;padding-inline-start:22px;color:var(--ink-2);font-size:14.5px;line-height:1.6}
+.cap-col li b{color:var(--ink);font-weight:700}
+.cap-col li::before{content:'';position:absolute;inset-inline-start:0;top:9px;width:8px;height:8px;border-radius:2.5px;background:var(--sun)}
+@media (max-width:1020px){ .cap-wall{grid-template-columns:1fr 1fr;gap:44px 40px} }
+@media (max-width:680px){ .cap-wall{grid-template-columns:1fr;gap:44px} }
 
 /* ---------- connections ---------- */
 .conn-head{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:40px;align-items:center;max-width:900px;margin:0 auto 48px}
 .conn-head .section-head{margin:0;text-align:start}
 .scene{position:relative;text-align:center}
-.scene::before{content:'';position:absolute;inset-inline-start:50%;transform:translateX(50%);bottom:6px;width:200px;height:200px;border-radius:48% 52% 55% 45%/55% 48% 52% 45%;background:var(--wash)}
-.scene img{position:relative;width:150px;filter:drop-shadow(0 10px 18px rgba(23,33,31,.13))}
+.scene::before{content:'';position:absolute;inset-inline-start:50%;transform:translateX(50%);bottom:6px;width:200px;height:200px;border-radius:48% 52% 55% 45%/55% 48% 52% 45%;background:var(--surface-2)}
+.scene img{position:relative;width:150px;filter:drop-shadow(0 10px 18px rgba(25,19,49,.13))}
 .scene .coin{position:absolute;bottom:26px;inset-inline-start:22px;width:40px;height:40px;border-radius:50%;background:var(--sun);color:#5C3A00;display:grid;place-items:center;font-weight:900;font-size:19px;box-shadow:0 6px 14px -4px rgba(184,119,10,.5)}
-.bank-groups{display:flex;flex-direction:column;gap:26px}
+.bank-groups{display:flex;flex-direction:column;gap:28px}
 .bank-group h3{font-size:14.5px;font-weight:800;color:var(--ink-3);margin-bottom:14px;display:flex;align-items:center;gap:12px;letter-spacing:.03em}
 .bank-group h3::after{content:'';flex:1;height:1px;background:var(--line)}
 .bank-grid{display:flex;flex-wrap:wrap;gap:12px}
-.bank{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 18px;font-weight:700;font-size:15px;color:var(--ink)}
+.bank{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 18px;font-weight:700;font-size:15px;color:var(--ink)}
 .bank img{width:28px;height:28px;object-fit:contain;border-radius:7px}
-.bank-note{max-width:680px;margin:28px auto 0;text-align:center;color:var(--ink-2);font-size:14.5px}
-.dedup-strip{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.dedup{display:flex;gap:16px;align-items:flex-start;padding:26px 0;border-top:1px solid var(--line)}
+.bank-note{max-width:680px;margin:30px auto 0;text-align:center;color:var(--ink-2);font-size:14.5px}
+.dedup-strip{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dedup{display:flex;gap:16px;align-items:flex-start;padding:28px 0;border-top:1px solid var(--line)}
 .dedup .di{flex:none}
 .dedup h3{font-size:16.5px;font-weight:800;margin-bottom:6px}
 .dedup p{color:var(--ink-2);font-size:15px}
 
 /* ---------- privacy (night) ---------- */
-.privacy-panel{background:var(--night);border-radius:36px;padding:72px 64px;color:var(--night-ink);box-shadow:var(--sh-lg);position:relative;overflow:hidden}
-.privacy-panel::before{content:'';position:absolute;width:640px;height:640px;border-radius:50%;background:rgba(159,127,255,.13);filter:blur(80px);top:-260px;inset-inline-end:-160px;pointer-events:none}
-.privacy-panel::after{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(255,184,77,.08);filter:blur(80px);bottom:-220px;inset-inline-start:-140px;pointer-events:none}
+.privacy-panel{background:var(--night);border-radius:40px;padding:76px 64px;color:var(--night-ink);box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.privacy-panel::before{content:'';position:absolute;width:640px;height:640px;border-radius:50%;background:rgba(159,127,255,.14);filter:blur(80px);top:-260px;inset-inline-end:-160px;pointer-events:none}
+.privacy-panel::after{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(255,184,77,.09);filter:blur(80px);bottom:-220px;inset-inline-start:-140px;pointer-events:none}
 .privacy-panel>*{position:relative;z-index:1}
-.privacy-panel .kicker{background:rgba(159,127,255,.1);border-color:rgba(159,127,255,.3);color:var(--night-teal)}
+.privacy-panel .kicker{background:rgba(159,127,255,.12);border-color:rgba(159,127,255,.3);color:var(--night-lav)}
 .privacy-panel h2{color:#fff;font-size:clamp(28px,4.2vw,44px);font-weight:900;letter-spacing:-.02em;margin-bottom:16px}
 .privacy-panel .sub{color:var(--night-ink-2);font-size:18.5px;max-width:58ch}
 .privacy-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;margin-top:48px;align-items:center}
-.privacy-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:20px}
+.privacy-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:22px}
 .privacy-list li{display:flex;gap:16px;align-items:flex-start}
-.privacy-list .pi{flex:none;width:46px;height:46px;border-radius:14px;background:rgba(159,127,255,.12);border:1px solid rgba(159,127,255,.22);display:grid;place-items:center;color:var(--night-teal)}
+.privacy-list .pi{flex:none;width:46px;height:46px;border-radius:14px;background:rgba(159,127,255,.12);border:1px solid rgba(159,127,255,.22);display:grid;place-items:center;color:var(--night-lav)}
 .privacy-list .pi svg{width:22px;height:22px}
 .privacy-list h3{color:var(--night-ink);font-size:17px;font-weight:800;margin-bottom:4px}
 .privacy-list p{color:var(--night-ink-2);font-size:14.5px}
-.privacy-list a{color:var(--night-teal)}
-.leaves-box{margin-top:48px;background:var(--night-2);border:1px solid rgba(159,127,255,.2);border-radius:var(--r-md);padding:26px 30px}
-.leaves-box h3{color:var(--night-sun);font-size:16.5px;font-weight:800;margin-bottom:10px}
-.leaves-box p{color:var(--night-ink-2);font-size:15px}
-.leaves-box b{color:var(--night-ink)}
+.privacy-list a{color:var(--night-lav)}
 .pdiag{background:var(--night-2);border:1px solid rgba(159,127,255,.2);border-radius:24px;padding:28px}
-.pdiag .pc{background:var(--night-3);border:1.5px solid var(--night-teal);border-radius:18px;padding:20px}
+.pdiag .pc{background:var(--night-3);border:1.5px solid var(--night-lav);border-radius:18px;padding:20px}
 .pdiag .pc h4{color:var(--night-ink);font-size:14.5px;display:flex;gap:9px;align-items:center;margin-bottom:14px;font-weight:800}
 .pdiag .inner{display:flex;flex-direction:column;gap:9px}
 .pdiag .chip-line{display:flex;align-items:center;gap:10px;background:rgba(159,127,255,.09);border-radius:12px;padding:9px 13px;font-size:12.5px;color:var(--night-ink-2)}
@@ -348,10 +354,10 @@ body.demo-open{overflow:hidden}
 table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5px}
 .compare th,.compare td{padding:17px 22px;text-align:right;border-bottom:1px solid var(--line)}
 .compare thead th{font-weight:800;color:var(--ink-2);font-size:14.5px;background:var(--paper)}
-.compare thead th.us{color:#fff;background:linear-gradient(120deg,var(--petrol),#0C6B71);font-size:15.5px}
+.compare thead th.us{color:#fff;background:var(--grad);font-size:15.5px}
 .compare thead th.us .us-badge{display:inline-block;background:var(--sun);color:#5C3A00;font-size:11px;font-weight:800;border-radius:999px;padding:2px 10px;margin-inline-start:8px;vertical-align:2px}
 .compare tbody tr:last-child td{border-bottom:none}
-.compare td.us{background:rgba(91,43,224,.055);font-weight:800;color:var(--petrol-deep)}
+.compare td.us{background:rgba(91,43,224,.06);font-weight:800;color:var(--brand-deep)}
 .compare td .y{color:var(--good);font-weight:700}
 .compare td .n{color:var(--bad);font-weight:700}
 .compare td .meh{color:var(--sun-deep);font-weight:700}
@@ -362,16 +368,17 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step;position:relative}
 .steps::before{content:'';position:absolute;top:1px;inset-inline:90px;border-top:2px dashed var(--line-strong)}
 @media (max-width:1020px){ .steps::before{display:none} }
-.step{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:34px 28px 28px;position:relative}
-.step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;inset-inline-start:26px;width:42px;height:42px;border-radius:999px;background:var(--petrol);color:#fff;font-weight:900;font-size:19px;display:grid;place-items:center}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:36px 28px 30px;position:relative;box-shadow:var(--sh-sm)}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;inset-inline-start:26px;width:42px;height:42px;border-radius:999px;background:var(--grad);color:#fff;font-weight:900;font-size:19px;display:grid;place-items:center;box-shadow:var(--glow)}
 .step h3{font-size:18.5px;font-weight:800;margin:6px 0 10px}
 .step p{color:var(--ink-2);font-size:15px}
-.sysreq{margin-top:38px;text-align:center;color:var(--ink-3);font-size:14px;font-weight:500}
+.sysreq{margin-top:40px;text-align:center;color:var(--ink-3);font-size:14px;font-weight:500}
 .sysreq b{color:var(--ink-2)}
 
 /* ---------- pricing ---------- */
-.price-card{max-width:580px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:28px;padding:54px 48px;text-align:center;box-shadow:var(--sh-md)}
-.price-zero{font-weight:900;font-size:88px;letter-spacing:-.04em;line-height:1;margin:8px 0 4px}
+.price-card{max-width:580px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:30px;padding:56px 48px;text-align:center;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.price-card::before{content:'';position:absolute;top:-120px;inset-inline-end:-120px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.16),transparent 65%);pointer-events:none}
+.price-zero{font-weight:900;font-size:92px;letter-spacing:-.04em;line-height:1;margin:8px 0 4px}
 .price-zero small{font-size:22px;color:var(--ink-2);font-weight:600;letter-spacing:0}
 .price-card .why{color:var(--ink-2);font-size:16.5px;max-width:42ch;margin:18px auto 30px}
 .price-card .why b{color:var(--ink)}
@@ -384,28 +391,32 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 .faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
 .faq-item{border-bottom:1px solid var(--line)}
 .faq-item summary{list-style:none;cursor:pointer;padding:24px 4px;font-weight:800;font-size:17.5px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .16s}
-.faq-item summary:hover{color:var(--petrol)}
+.faq-item summary:hover{color:var(--brand)}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:'+';font-size:26px;font-weight:400;color:var(--sun-deep);flex:none;transition:transform .25s var(--ease);line-height:1}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item .faq-body{padding:0 4px 26px;color:var(--ink-2);font-size:15.5px;max-width:64ch}
 .faq-item .faq-body b{color:var(--ink)}
-.faq-peep{position:absolute;top:-40px;inset-inline-end:-190px;width:150px;filter:drop-shadow(0 10px 18px rgba(23,33,31,.12))}
+.faq-peep{position:absolute;top:-40px;inset-inline-end:-190px;width:150px;filter:drop-shadow(0 10px 18px rgba(25,19,49,.12))}
 
 /* ---------- final CTA ---------- */
 .final-wrap{padding:40px 0 110px}
-.final-card{background:var(--petrol-deep);border-radius:32px;padding:80px 64px;text-align:center;color:#fff;box-shadow:var(--sh-lg)}
-.final-card h2{color:#fff;font-size:clamp(30px,4.6vw,50px);font-weight:900;letter-spacing:-.02em;margin:20px 0 14px}
-.final-card .sub{color:rgba(255,255,255,.75);font-size:19px;margin-bottom:36px}
-.final-card .btn-primary{background:#fff;color:var(--petrol-deep);box-shadow:0 18px 50px -14px rgba(0,0,0,.4)}
-.final-card .cta-note{color:rgba(255,255,255,.6)}
-.final-card .cta-note b{color:rgba(255,255,255,.85)}
+.final-card{background:linear-gradient(135deg,#2A1070,#4318C9 55%,#5B2BE0);border-radius:36px;padding:84px 64px;text-align:center;color:#fff;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.final-card::before{content:'';position:absolute;top:-160px;inset-inline-start:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.28),transparent 62%);pointer-events:none}
+.final-card::after{content:'';position:absolute;bottom:-200px;inset-inline-end:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(139,102,255,.35),transparent 62%);pointer-events:none}
+.final-card>*{position:relative;z-index:1}
+.final-card h2{color:#fff;font-size:clamp(30px,4.6vw,52px);font-weight:900;letter-spacing:-.02em;margin:20px 0 14px}
+.final-card .sub{color:rgba(255,255,255,.78);font-size:19px;margin-bottom:38px}
+.final-card .btn-primary{background:#fff;color:var(--brand-deep);box-shadow:0 18px 50px -14px rgba(0,0,0,.45)}
+.final-card .btn-primary:hover{filter:none;background:#F4EFFF}
+.final-card .cta-note{color:rgba(255,255,255,.62)}
+.final-card .cta-note b{color:rgba(255,255,255,.88)}
 
 /* ---------- footer ---------- */
-.site-footer{border-top:1px solid var(--line);padding:42px 0;font-size:14px;color:var(--ink-3);position:relative;overflow:hidden}
+.site-footer{border-top:1px solid var(--line);padding:44px 0;font-size:14px;color:var(--ink-3);position:relative;overflow:hidden}
 .footer-mark{position:absolute;inset-inline-start:-70px;bottom:-110px;width:280px;height:280px;opacity:.05;pointer-events:none}
 .footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
-.footer-brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;color:var(--petrol-deep)}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;color:var(--brand-deep)}
 .footer-links{display:flex;gap:22px;flex-wrap:wrap}
 .footer-links a{color:var(--ink-2);font-weight:600}
 .footer-legal{width:100%;margin-top:16px;font-size:13px}
@@ -415,46 +426,60 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
-  .m-meter .used,.m-meter .plan{animation:none;width:var(--w)}
-  .m-flow i{animation:none}
-  .float-chip{animation:none}
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
 
 /* ---------- responsive ---------- */
 @media (max-width:1240px){ .faq-peep{display:none} }
 @media (max-width:1020px){
-  .hero-grid{grid-template-columns:1fr;gap:52px}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
   .hero-visual .peep-hello{display:none}
-  .qa-row,.qa-row.flip{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .qa-row,.qa-row.flip{grid-template-columns:1fr;gap:36px;padding:40px 0}
   .qa-row.flip .qa-text{order:1}
   .qa-row.flip .qa-visual{order:2}
   .privacy-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
-  .bento{grid-template-columns:1fr 1fr}
   .conn-head{grid-template-columns:1fr;text-align:center}
   .conn-head .section-head{text-align:center}
   .conn-head .scene{display:none}
+  .tour-panel{padding:60px 40px 56px}
 }
 @media (max-width:680px){
-  section{padding:68px 0}
+  body{font-size:16.5px;line-height:1.8}
+  .container{padding:0 22px}
+  section{padding:76px 0}
+  .section-head{margin-bottom:44px}
+  .section-head .sub{font-size:17.5px}
   .main-nav{display:none}
   .site-header{top:10px;padding:0 12px}
-  .steps,.dedup-strip,.bento{grid-template-columns:1fr}
-  .bento{gap:36px}
-  .stats{grid-template-columns:1fr 1fr;padding:4px 16px}
-  .stat{padding:20px 8px}
+  .header-pill{height:58px}
+  .hero{padding-top:52px}
+  .hero h1{margin:20px 0 18px}
+  .hero .lead{font-size:18px;margin-bottom:30px}
+  .hero-ctas{gap:12px}
+  .hero-ctas .btn{width:100%}
+  .hero-proof{margin-top:30px}
+  .marquee-wrap{padding:40px 0 8px}
+  .stats-band{margin-top:56px}
+  .stats{grid-template-columns:1fr 1fr;padding:6px 18px}
+  .stat{padding:26px 10px}
   .stat:nth-child(3){border-inline-start:none}
-  .privacy-panel{padding:48px 28px;border-radius:28px}
-  .final-card{padding:56px 28px;border-radius:30px}
-  .mock-shell{grid-template-columns:1fr}
-  .mock-side{display:none}
+  .qa-row,.qa-row.flip{gap:30px;padding:34px 0}
+  .qa-text .desc{font-size:16.5px}
+  .tour-panel{padding:52px 22px 48px;border-radius:30px}
+  .tour-tabs{gap:7px;margin-bottom:28px}
+  .tour-tab{padding:9px 15px;font-size:13.5px}
+  .tour-cap{justify-content:center;text-align:center}
+  .tour-cap .btn{width:100%}
+  .steps,.dedup-strip{grid-template-columns:1fr}
+  .steps{gap:34px}
+  .privacy-panel{padding:52px 26px;border-radius:30px}
+  .final-card{padding:60px 26px;border-radius:30px}
   .btn-xl{width:100%}
-  .hero{padding-top:56px}
-  .float-chip.b{display:none}
-  .m-kpi .v{font-size:13.5px}
   .pdiag .ext{flex-direction:column}
-  .price-zero{font-size:70px}
+  .price-card{padding:46px 26px}
+  .price-zero{font-size:72px}
+  .demo-links{gap:10px}
 }
 </style>
 </head>
@@ -485,6 +510,9 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.1 10.4A6 6 0 1 1 10.3 18"/><path d="M7 6h1v4"/><path d="m16.7 13.9.7.7-2.8 2.8"/></symbol>
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="m12 2 9 5H3Z"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/></symbol>
   <symbol id="i-frame" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="8" fill="#FFB020" stroke="none"/></symbol>
 </svg>
 
@@ -496,9 +524,9 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
     </a>
     <nav class="main-nav" aria-label="ניווט ראשי">
       <a href="#questions">היכולות</a>
+      <a href="#tour">סיור בתוכנה</a>
       <a href="#connections">בנקים</a>
       <a href="#privacy">פרטיות</a>
-      <a href="#pricing">מחיר</a>
       <a href="#faq">שאלות</a>
     </nav>
     <div class="header-cta">
@@ -606,7 +634,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 </div>
 
 <!-- ============================ PAINS ============================ -->
-<section class="pains" aria-labelledby="pains-title" style="padding-top:70px">
+<section class="pains" aria-labelledby="pains-title" style="padding-top:76px">
   <div class="container">
     <div class="section-head reveal">
       <span class="kicker">רגע של כנות</span>
@@ -630,13 +658,13 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   </div>
 </section>
 
-<!-- ============================ QUESTION TABS ============================ -->
-<section id="questions" aria-labelledby="questions-title" style="padding-top:40px">
+<!-- ============================ QUESTION TABS — real screenshots ============================ -->
+<section id="questions" aria-labelledby="questions-title" style="padding-top:44px">
   <div class="container">
     <div class="section-head reveal">
       <span class="kicker">בפנים</span>
       <h2 id="questions-title">שלוש שאלות. שלושה מסכים.</h2>
-      <p class="sub">המסכים נקראים כמו השאלות שאתה באמת שואל את עצמך.</p>
+      <p class="sub">המסכים נקראים כמו השאלות שאתה באמת שואל את עצמך — וכל תמונה כאן היא צילום אמיתי מהתוכנה.</p>
     </div>
 
     <!-- Q1 -->
@@ -649,38 +677,17 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         </p>
         <ul class="qa-feats">
           <li><b>נכנס ← יצא ← נותר ביד</b>, מול אותה נקודה בחודש שעבר</li>
-          <li><b>חריגה מסומנת מיד:</b> ״מסעדות — כבר ‎+45%‎ מחודש רגיל״</li>
-          <li><b>״מה דורש אותך״</b> — עד 3 התראות. שקט = הכל תקין</li>
+          <li><b>לאן הכסף הולך</b> — כל קטגוריה נפתחת עד העסקה הבודדת</li>
+          <li><b>״מה דורש אותך״</b> — עד 3 התראות חכמות. שקט = הכל תקין</li>
         </ul>
+        <a class="qa-live" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
       </div>
-      <div class="qa-visual" aria-hidden="true">
-        <div class="mock" dir="rtl" style="font-size:12px">
-          <div class="mock-bar"><span class="name">החודש עד כה</span><span class="dots"><i></i><i></i><i></i></span></div>
-          <div style="padding:18px 20px;background:#fff">
-            <svg viewBox="0 0 520 190" width="100%" style="display:block;direction:ltr" role="img">
-              <rect x="472" y="30" width="14" height="130" rx="5" fill="#5B2BE0"/>
-              <path d="M472,36 C360,36 300,44 188,44 L188,92 C300,92 360,96 472,96 Z" fill="#B26A00" opacity=".5"/>
-              <path d="M472,102 C360,102 300,116 188,116 L188,168 C300,168 360,154 472,154 Z" fill="#177E57" opacity=".45"/>
-              <rect x="174" y="42" width="14" height="52" rx="5" fill="#B26A00"/>
-              <rect x="174" y="114" width="14" height="56" rx="5" fill="#177E57"/>
-              <text x="466" y="20" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-weight="700" font-size="13" fill="#17211F">נכנס עד כה · ‎₪15,635</text>
-              <text x="166" y="60" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-weight="700" font-size="13" fill="#17211F">יצא עד כה</text>
-              <text x="166" y="79" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-weight="800" font-size="14" fill="#B26A00">‎₪7,540</text>
-              <text x="166" y="134" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-weight="700" font-size="13" fill="#17211F">נותר ביד</text>
-              <text x="166" y="153" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-weight="800" font-size="14" fill="#177E57">‎+₪8,095</text>
-            </svg>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-              <div class="mcard" style="display:flex;gap:10px;align-items:center;padding:10px 13px">
-                <span aria-hidden="true" style="flex:none;width:10px;height:10px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(255,176,32,.18)"></span>
-                <span style="font-size:11.5px;color:var(--ink-2)"><b style="color:var(--ink)">מסעדות כבר ‎+45%‎ מעל חודש רגיל</b> · ‎₪1,240 עד כה — שווה מבט</span>
-              </div>
-              <div class="mcard" style="display:flex;gap:10px;align-items:center;padding:10px 13px">
-                <span aria-hidden="true" style="flex:none;width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(139,102,255,.14)"></span>
-                <span style="font-size:11.5px;color:var(--ink-2)">3 עסקאות מחכות לחידוד סיווג · <b style="color:var(--petrol)">לחידוד ←</b></span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="qa-visual">
+        <a class="shot" href="demo/#/month" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳איך אני החודש׳ בדמו החי">
+          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>איך אני החודש?</span><span class="dots"><i></i><i></i><i></i></span></span>
+          <img src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: זרימת החודש — נכנסו 24,250 ₪, יצאו 14,042 ₪, נותרו ביד 10,208 ₪, ונשאר להוציא בבטחה 8,408 ₪">
+          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
+        </a>
       </div>
     </div>
 
@@ -690,47 +697,21 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <span class="qa-num">שאלה 2</span>
         <h3>״איך אני בכללי?״</h3>
         <p class="desc">
-          מבט על שנה ויותר: <b>כמה באמת נשאר בצד כל חודש</b> — מול הממוצע שלך, ומול ישראל.
+          מבט על חודשים ושנים: <b>כמה באמת נשאר בצד כל חודש</b> — מול הממוצע שלך, ומול החציון הישראלי.
         </p>
         <ul class="qa-feats">
-          <li><b>פסק־דין במשפט:</b> ״בממוצע נשאר לך בצד ₪2,830 בחודש״</li>
-          <li><b>פרופיל המינוס</b> — כולל כמה המינוס עלה לך בריבית, בשקלים</li>
-          <li><b>זחילת רמת חיים:</b> ״מכל שקל שהרווחת יותר — 38 אג׳ הלכו להוצאה״</li>
+          <li><b>פסק־דין במשפט:</b> ״בממוצע נשאר לך בצד ‎₪8,355‎ בחודש״</li>
+          <li><b>הכנסות מול הוצאות</b> — שיעור החיסכון שלך, באחוזים ובשקלים</li>
+          <li><b>רצפים וחריגים:</b> אילו חודשים היו בפלוס, ומה שבר את הרצף</li>
         </ul>
+        <a class="qa-live" href="demo/#/overview" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
       </div>
-      <div class="qa-visual" aria-hidden="true">
-        <div class="mock" dir="rtl" style="font-size:12px">
-          <div class="mock-bar"><span class="name">כמה נשאר כל חודש · 12 חוד׳</span><span class="dots"><i></i><i></i><i></i></span></div>
-          <div style="padding:18px 20px;background:#fff">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:12px">
-              <span style="font-size:12px;color:var(--ink-2);font-weight:600">בממוצע נשאר לך בצד</span>
-              <span class="money" style="font-weight:900;font-size:24px;color:var(--good)">‎+₪2,830 <small style="font-size:10px;color:var(--ink-3);font-weight:500">לחודש</small></span>
-            </div>
-            <svg viewBox="0 0 520 150" width="100%" style="display:block;direction:ltr" role="img">
-              <line x1="10" y1="100" x2="510" y2="100" stroke="rgba(67,24,201,.22)" stroke-width="1"/>
-              <line x1="10" y1="58" x2="510" y2="58" stroke="#177E57" stroke-width="1.5" stroke-dasharray="5 5" opacity=".55"/>
-              <text x="508" y="50" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" fill="#177E57">הממוצע שלך</text>
-              <rect x="478" y="70" width="24" height="30" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="440" y="80" width="24" height="20" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="402" y="100" width="24" height="22" rx="6" fill="#C0442E" opacity=".75"/>
-              <rect x="364" y="62" width="24" height="38" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="326" y="52" width="24" height="48" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="288" y="74" width="24" height="26" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="250" y="100" width="24" height="14" rx="6" fill="#C0442E" opacity=".75"/>
-              <rect x="212" y="66" width="24" height="34" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="174" y="44" width="24" height="56" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="136" y="58" width="24" height="42" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="98" y="50" width="24" height="50" rx="6" fill="#177E57" opacity=".8"/>
-              <rect x="60" y="40" width="24" height="60" rx="6" fill="#177E57"/>
-              <text x="72" y="32" text-anchor="middle" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="#177E57">השיא ✦</text>
-            </svg>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-              <span class="m-chip good">10 מתוך 12 חודשים בפלוס</span>
-              <span class="m-chip good">רצף נוכחי: 3 חודשים</span>
-              <span class="m-chip warn">המינוס עלה לך <span dir="ltr">~₪380</span> השנה</span>
-            </div>
-          </div>
-        </div>
+      <div class="qa-visual">
+        <a class="shot" href="demo/#/overview" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳איך אני בכללי׳ בדמו החי">
+          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>איך אני בכללי?</span><span class="dots"><i></i><i></i><i></i></span></span>
+          <img src="shots/overview.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: בממוצע נשארים בצד 8,355 ₪ בחודש — 37% חיסכון, עם גרף כמה נשאר כל חודש">
+          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
+        </a>
       </div>
     </div>
 
@@ -745,92 +726,117 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <ul class="qa-feats">
           <li><b>נקודת השפל בדרך</b> — מתי, וכמה קרוב למסגרת האשראי</li>
           <li><b>״מה אם...״</b> — שינוי הכנסה או הוצאה חד־פעמית, חי על הגרף</li>
-          <li><b>תחזית מול מציאות</b> — האפליקציה שומרת קבלות על עצמה</li>
+          <li><b>אבני דרך:</b> מתי כל יעד חיסכון יושג בקצב הנוכחי</li>
         </ul>
+        <a class="qa-live" href="demo/#/future" target="_blank" rel="noopener">לנסות את המסך הזה חי ↗</a>
       </div>
-      <div class="qa-visual" aria-hidden="true">
-        <div class="mock" dir="rtl" style="font-size:12px">
-          <div class="mock-bar"><span class="name">צפי יתרה · 3 חודשים קדימה</span><span class="dots"><i></i><i></i><i></i></span></div>
-          <div style="padding:18px 20px;background:#fff">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px">
-              <span style="font-size:12px;color:var(--ink-2);font-weight:600">בעוד 3 חודשים · צפי יתרה</span>
-              <span class="money" style="font-weight:900;font-size:24px;color:var(--petrol-deep)">‎~₪41,200</span>
-            </div>
-            <svg viewBox="0 0 520 210" width="100%" style="display:block;direction:ltr" role="img">
-              <line x1="14" y1="50" x2="506" y2="50" stroke="rgba(67,24,201,.1)" stroke-width="1"/>
-              <line x1="14" y1="105" x2="506" y2="105" stroke="rgba(67,24,201,.1)" stroke-width="1"/>
-              <line x1="14" y1="160" x2="506" y2="160" stroke="rgba(67,24,201,.1)" stroke-width="1"/>
-              <line x1="14" y1="188" x2="506" y2="188" stroke="#C0442E" stroke-width="1.5" stroke-dasharray="6 5"/>
-              <text x="18" y="182" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" fill="#C0442E">מסגרת האשראי</text>
-              <path d="M150,96 C220,108 260,150 330,142 C400,134 450,98 506,88 L506,44 C450,58 400,86 330,96 C260,106 220,84 150,96 Z" fill="#5B2BE0" opacity=".1"/>
-              <path d="M14,120 C40,116 60,90 90,98 C115,104 130,92 150,96" fill="none" stroke="#5B2BE0" stroke-width="3" stroke-linecap="round"/>
-              <path d="M150,96 C220,96 260,132 330,120 C400,108 450,80 506,66" fill="none" stroke="#5B2BE0" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
-              <path d="M150,96 C220,90 260,116 330,100 C400,86 450,58 506,44" fill="none" stroke="#B26A00" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 6"/>
-              <text x="502" y="36" text-anchor="end" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="#B26A00">מה אם ‎+₪500/חודש</text>
-              <line x1="150" y1="30" x2="150" y2="196" stroke="rgba(67,24,201,.22)" stroke-width="1"/>
-              <text x="150" y="22" text-anchor="middle" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" fill="#93A09A">היום</text>
-              <line x1="238" y1="118" x2="238" y2="140" stroke="#177E57" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="238" y="156" text-anchor="middle" font-family="Heebo,'Segoe UI',sans-serif" font-size="9.5" fill="#177E57">משכורת</text>
-              <line x1="300" y1="112" x2="300" y2="134" stroke="#C94F35" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="300" y="148" text-anchor="middle" font-family="Heebo,'Segoe UI',sans-serif" font-size="9.5" fill="#C94F35">חיוב מקס</text>
-              <circle cx="330" cy="120" r="4.5" fill="#FFB020"/>
-              <text x="330" y="176" text-anchor="middle" font-family="Heebo,'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="#B26A00">נקודת השפל · ‎₪6,180</text>
-            </svg>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-              <span class="m-chip good">✦ חוצה ‎₪50K באוקטובר</span>
-              <span class="m-chip warn">◎ ״חופשה״ — היעד יושג ~ביוני</span>
-            </div>
-          </div>
+      <div class="qa-visual">
+        <a class="shot" href="demo/#/future" target="_blank" rel="noopener" aria-label="פתיחת מסך ׳ומה לגבי העתיד׳ בדמו החי">
+          <span class="shot-bar" aria-hidden="true"><span class="name"><svg width="13" height="13" viewBox="0 0 96 96"><rect x="9" y="9" width="78" height="78" rx="24" fill="none" stroke="#5B2BE0" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14"/><circle cx="15.5" cy="15.5" r="9" fill="#FFB020"/></svg>ומה לגבי העתיד?</span><span class="dots"><i></i><i></i><i></i></span></span>
+          <img src="shots/future.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: צפי יתרה של כ-23,000 ₪ בעוד 60 יום, גרף תחזית עם נקודת שפל, תרחישי מה-אם ואבני דרך">
+          <span class="shot-live"><svg class="isvg" width="14" height="14" aria-hidden="true"><use href="#i-play"/></svg>לחיצה פותחת את המסך חי</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="shot-note reveal"><svg class="isvg cam" width="17" height="17" aria-hidden="true"><use href="#i-camera"/></svg>כל הצילומים בעמוד הזה הם צילומי מסך אמיתיים של התוכנה, עם נתוני הדמו שרצים גם כאן למעלה.</p>
+  </div>
+</section>
+
+<!-- ============================ PRODUCT TOUR ============================ -->
+<section id="tour" aria-labelledby="tour-title" style="padding-top:24px">
+  <div class="container">
+    <div class="tour-panel reveal">
+      <div class="section-head">
+        <span class="kicker">סיור מודרך</span>
+        <h2 id="tour-title">כל התוכנה, מסך אחרי מסך</h2>
+        <p class="sub">שישה מסכים — בדיוק כמו בתפריט האמיתי של מסגרת. בחר מסך, ראה אותו באמת.</p>
+      </div>
+      <div class="tour-tabs" role="tablist" aria-label="מסכי התוכנה">
+        <button class="tour-tab" role="tab" aria-selected="true" data-tour="month">איך אני החודש?</button>
+        <button class="tour-tab" role="tab" aria-selected="false" data-tour="overview">איך אני בכללי?</button>
+        <button class="tour-tab" role="tab" aria-selected="false" data-tour="future">ומה לגבי העתיד?</button>
+        <button class="tour-tab" role="tab" aria-selected="false" data-tour="savings">חיסכונות</button>
+        <button class="tour-tab" role="tab" aria-selected="false" data-tour="health">בריאות</button>
+        <button class="tour-tab" role="tab" aria-selected="false" data-tour="networth">הון</button>
+      </div>
+      <div class="tour-stage">
+        <a class="tour-shot" id="tourShotLink" href="demo/#/month" target="_blank" rel="noopener">
+          <img id="tourShotImg" src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="צילום מסך אמיתי של מסגרת: מסך ׳איך אני החודש׳">
+        </a>
+        <div class="tour-cap">
+          <p id="tourCap"><b>איך אני החודש?</b> — זרימת הכסף של החודש, לאן הוא הולך, וכמה מותר עוד להוציא בבטחה. עם התראות רק כשמשהו באמת דורש אותך.</p>
+          <a class="btn btn-ghost btn-sm" id="tourLive" href="demo/#/month" target="_blank" rel="noopener">לנסות את המסך חי ↗</a>
         </div>
       </div>
+      <p class="tour-real"><svg class="isvg cam" width="16" height="16" aria-hidden="true"><use href="#i-camera"/></svg>צילומי מסך אמיתיים, לא הדמיות — מה שרואים כאן זה מה שמקבלים.</p>
     </div>
   </div>
 </section>
 
-<!-- ============================ BENTO ============================ -->
-<section id="more" aria-labelledby="more-title" class="band" style="padding-top:64px">
+<!-- ============================ CAPABILITY WALL ============================ -->
+<section id="more" aria-labelledby="more-title">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">ויש עוד</span>
-      <h2 id="more-title">כל השאר — באותה רצינות.</h2>
+      <span class="kicker">היכולות המלאות</span>
+      <h2 id="more-title">כל מה שיש בפנים. <span class="grad-text">בלי מדרגות, בלי פרימיום.</span></h2>
+      <p class="sub">הכול נכלל מהיום הראשון — זו הרשימה המלאה, לא ״עיקרי הדברים״.</p>
     </div>
-    <div class="bento">
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-target"/></svg></span>
-        <h3>יעדי חיסכון בתוך החודש</h3>
-        <p>ההפקדה המתוכננת יורדת מ״נשאר להוציא״. החיסכון קודם — לא מה שנשאר.</p>
+    <div class="cap-wall">
+      <div class="cap-col reveal">
+        <span class="ci" aria-hidden="true"><svg class="isvg"><use href="#i-search"/></svg></span>
+        <h3>רואים הכל</h3>
+        <ul>
+          <li><b>סנכרון מכל המוסדות במקביל</b> — עו״ש וכרטיסים במסך אחד</li>
+          <li><b>סיווג אוטומטי ל־14 קטגוריות</b> — אין עסקה בלי בית</li>
+          <li><b>חיפוש בכל העסקאות</b> — כל התקופות, תוצאה מיידית</li>
+          <li><b>עסקאות ידניות</b> — מזומן וצ׳קים נכנסים לתמונה</li>
+          <li><b>חיוב כרטיס לא נספר פעמיים</b> — מוחרג אוטומטית</li>
+          <li><b>העברות פנימיות מזוהות</b> — כסף שזז בין חשבונותיך אינו הכנסה</li>
+        </ul>
       </div>
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-heart-pulse"/></svg></span>
-        <h3>בריאות פיננסית שקופה</h3>
-        <p>12 מדדים לפי ספי המקצוע, כל חישוב מוסבר עד הסוף. בלי ציון סודי.</p>
+      <div class="cap-col reveal">
+        <span class="ci" aria-hidden="true"><svg class="isvg"><use href="#i-repeat"/></svg></span>
+        <h3>שולטים בסיווג</h3>
+        <ul>
+          <li><b>חוקים אישיים עם תצוגה מקדימה</b> — רואים מה ישתנה לפני שמאשרים</li>
+          <li><b>חידוד סיווגים מרוכז</b> — כל מה שדורש מבט, במקום אחד</li>
+          <li><b>זיהוי מחזוריים חכם</b> — גם ארנונה דו־חודשית וביטוח שנתי</li>
+          <li><b>״לא מחזורי״ בלחיצה</b> — זיהוי שגוי מתוקן מיד</li>
+          <li><b>תובנות חודשיות</b> — חריגות והזדמנויות, בלי רעש</li>
+          <li><b>מסגרת אשראי מוגדרת</b> — ההתראות נמדדות מולה</li>
+        </ul>
       </div>
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-wallet"/></svg></span>
-        <h3>שווי נקי אמיתי</h3>
-        <p>כולל מה שאין בסנכרון — פיקדונות, הלוואות, ניירות ערך. אתה מאשר, היא כותבת.</p>
+      <div class="cap-col reveal">
+        <span class="ci" aria-hidden="true"><svg class="isvg"><use href="#i-scope"/></svg></span>
+        <h3>מבינים קדימה</h3>
+        <ul>
+          <li><b>תחזית עד שנה קדימה</b> — בנויה מהלוח האמיתי שלך</li>
+          <li><b>מכוילת מול המציאות</b> — התחזית נבחנת מול מה שקרה בפועל</li>
+          <li><b>תרחישי ״מה אם״</b> — שינוי הכנסה, הוצאה חד־פעמית, חי על הגרף</li>
+          <li><b>נקודת השפל מסומנת</b> — מתי הכי קרוב למסגרת, וכמה</li>
+          <li><b>יעדי חיסכון בתוך התזרים</b> — ההפקדה יורדת מ״נשאר להוציא״</li>
+          <li><b>12 מדדי בריאות שקופים</b> — כל חישוב מוסבר עד הסוף</li>
+        </ul>
       </div>
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-repeat"/></svg></span>
-        <h3>מחזוריים בשליטה</h3>
-        <p>גם ארנונה דו־חודשית וביטוח שנתי מזוהים. זיהוי שגוי? ״לא מחזורי״ בלחיצה.</p>
-      </div>
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-users"/></svg></span>
-        <h3>משתמשים נפרדים באמת</h3>
-        <p>לכל אחד מסד נתונים, גיבויים וצבע משלו — הפרדה פיזית, לא סיסמה.</p>
-      </div>
-      <div class="bcard reveal">
-        <span class="bi tile" aria-hidden="true"><svg class="isvg"><use href="#i-database"/></svg></span>
-        <h3>אפס נעילה</h3>
-        <p>ייצוא CSV, גיבוי ושחזור חופשיים. גיבוי אוטומטי לפני כל פעולה מסוכנת.</p>
+      <div class="cap-col reveal">
+        <span class="ci" aria-hidden="true"><svg class="isvg"><use href="#i-shield-check"/></svg></span>
+        <h3>הכל שלך</h3>
+        <ul>
+          <li><b>שווי נקי אמיתי</b> — פיקדונות, הלוואות וני״ע, גם מטבע זר</li>
+          <li><b>משתמשים נפרדים באמת</b> — מסד נתונים וגיבויים לכל אחד</li>
+          <li><b>גיבוי אוטומטי לפני כל פעולה מסוכנת</b> — ושחזור בלחיצה</li>
+          <li><b>ייצוא CSV חופשי</b> — אפס נעילה, הנתונים עוברים איתך</li>
+          <li><b>מצב כהה מלא</b> — ״לילה סגול״, לעבודה בערב</li>
+          <li><b>עדכונים אוטומטיים ברקע</b> — תמיד בגרסה האחרונה</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ CONNECTIONS ============================ -->
-<section id="connections" aria-labelledby="connections-title">
+<section id="connections" aria-labelledby="connections-title" style="background:var(--paper);border-block:1px solid var(--line)">
   <div class="container">
     <div class="conn-head">
       <div class="section-head reveal">
@@ -872,9 +878,9 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
       <div class="bank-group">
         <h3>ועוד</h3>
         <div class="bank-grid" role="list">
-          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--petrol)" aria-hidden="true"><use href="#i-users"/></svg>ביחד בשבילך</span>
-          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--petrol)" aria-hidden="true"><use href="#i-award"/></svg>בהצדעה</span>
-          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--petrol)" aria-hidden="true"><use href="#i-pencil"/></svg>עסקאות ידניות — מזומן וצ׳קים</span>
+          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--brand)" aria-hidden="true"><use href="#i-users"/></svg>ביחד בשבילך</span>
+          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--brand)" aria-hidden="true"><use href="#i-award"/></svg>בהצדעה</span>
+          <span class="bank" role="listitem"><svg class="isvg" width="20" height="20" style="color:var(--brand)" aria-hidden="true"><use href="#i-pencil"/></svg>עסקאות ידניות — מזומן וצ׳קים</span>
         </div>
       </div>
     </div>
@@ -949,10 +955,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
               המחשב שלך
             </h4>
             <div class="inner">
-              <div class="chip-line"><svg width="15" height="15" style="color:var(--night-teal);flex:none" aria-hidden="true"><use href="#i-frame"/></svg><b>מסגרת</b> — האפליקציה, רצה מקומית</div>
-              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-teal);flex:none" aria-hidden="true"><use href="#i-database"/></svg><b>finance.db</b> — כל העסקאות, אצלך</div>
-              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-teal);flex:none" aria-hidden="true"><use href="#i-lock"/></svg><b>DPAPI</b> — פרטי התחברות מוצפנים</div>
-              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-teal);flex:none" aria-hidden="true"><use href="#i-lifebuoy"/></svg><b>backups/</b> — הגיבויים שלך</div>
+              <div class="chip-line"><svg width="15" height="15" style="color:var(--night-lav);flex:none" aria-hidden="true"><use href="#i-frame"/></svg><b>מסגרת</b> — האפליקציה, רצה מקומית</div>
+              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-lav);flex:none" aria-hidden="true"><use href="#i-database"/></svg><b>finance.db</b> — כל העסקאות, אצלך</div>
+              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-lav);flex:none" aria-hidden="true"><use href="#i-lock"/></svg><b>DPAPI</b> — פרטי התחברות מוצפנים</div>
+              <div class="chip-line"><svg class="isvg" width="15" height="15" style="color:var(--night-lav);flex:none" aria-hidden="true"><use href="#i-lifebuoy"/></svg><b>backups/</b> — הגיבויים שלך</div>
             </div>
           </div>
           <div class="arrow-row"><span class="line"></span><span>שתי תקשורות בלבד</span><span class="line"></span></div>
@@ -1221,6 +1227,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
     </span>
     <nav class="footer-links" aria-label="קישורי פוטר">
       <a href="#questions">היכולות</a>
+      <a href="#tour">סיור בתוכנה</a>
       <a href="#privacy">פרטיות</a>
       <a href="#faq">שאלות ותשובות</a>
       <a href="https://github.com/OrMizrahi12/misgeret-releases/releases" rel="noopener">כל הגרסאות</a>
@@ -1236,53 +1243,79 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 <script>
 (function(){
   'use strict';
-  /* header shadow */
+
+  /* header shadow on scroll */
   var header = document.querySelector('.site-header');
   var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 8); };
-  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* marquee: duplicate the chips once so translateX(-50%) loops seamlessly */
+  /* marquee: duplicate the track for a seamless loop */
   var track = document.getElementById('marqueeTrack');
   if (track) track.innerHTML += track.innerHTML;
 
-  /* live demo renders immediately — no gate, no mystery click */
+  /* reveal on scroll */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
 
-  /* "הרחב למצב אמיתי": the SAME frame goes fixed-fullscreen via CSS only, so the
-     iframe never reloads and whatever the visitor was doing in the app survives */
-  var expandBtn = document.getElementById('demoExpand');
+  /* live demo: expand to a desktop-like window above the dimmed site */
+  var demoFrame = document.getElementById('demoFrame');
+  var demoExpand = document.getElementById('demoExpand');
   var backdrop = document.getElementById('demoBackdrop');
   function setExpanded(on){
-    document.getElementById('demoFrame').classList.toggle('expanded', on);
+    demoFrame.classList.toggle('expanded', on);
     document.body.classList.toggle('demo-open', on);
-    expandBtn.textContent = on ? '✕ חזרה לאתר' : '⤢ הרחב למצב אמיתי';
-    expandBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    demoExpand.setAttribute('aria-pressed', String(on));
+    demoExpand.textContent = on ? '✕ חזרה לאתר' : '⤢ הרחב למצב אמיתי';
   }
-  if (expandBtn) {
-    expandBtn.addEventListener('click', function(){
-      setExpanded(!document.getElementById('demoFrame').classList.contains('expanded'));
-    });
+  if (demoExpand) {
+    demoExpand.addEventListener('click', function(){ setExpanded(!demoFrame.classList.contains('expanded')); });
     backdrop.addEventListener('click', function(){ setExpanded(false); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setExpanded(false); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && demoFrame.classList.contains('expanded')) setExpanded(false);
+    });
   }
 
-  /* reveal on scroll */
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window) || location.hash) {
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
-    items.forEach(function(el){ io.observe(el); });
-    window.setTimeout(function(){
-      items.forEach(function(el){
-        var r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
-      });
-    }, 1800);
-  }
+  /* product tour: swap the real screenshot per tab */
+  var TOUR = {
+    month:    { cap: '<b>איך אני החודש?</b> — זרימת הכסף של החודש, לאן הוא הולך, וכמה מותר עוד להוציא בבטחה. עם התראות רק כשמשהו באמת דורש אותך.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳איך אני החודש׳ — זרימת החודש, קטגוריות ונשאר להוציא' },
+    overview: { cap: '<b>איך אני בכללי?</b> — הממוצע האמיתי שלך: כמה נכנס, כמה יוצא, כמה נשאר בצד כל חודש — ומה המגמה לאורך זמן.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳איך אני בכללי׳ — ממוצע חודשי ושיעור חיסכון' },
+    future:   { cap: '<b>ומה לגבי העתיד?</b> — צפי היתרה קדימה על הלוח האמיתי שלך, נקודת השפל, תרחישי ״מה אם״ ואבני דרך ליעדים.', alt: 'צילום מסך אמיתי של מסגרת: מסך ׳ומה לגבי העתיד׳ — תחזית יתרה ותרחישים' },
+    savings:  { cap: '<b>חיסכונות</b> — יעדים עם קצב חודשי, התקדמות באחוזים וצפי הגעה. ההפקדה המתוכננת יורדת מ״נשאר להוציא״ — החיסכון קודם.', alt: 'צילום מסך אמיתי של מסגרת: מסך החיסכונות — יעדים, התקדמות והפקדות' },
+    health:   { cap: '<b>בריאות</b> — 12 מדדים לפי ספי המקצוע: רמה ועמידות, כל חישוב מוסבר עד הסוף. בלי ציונים סודיים.', alt: 'צילום מסך אמיתי של מסגרת: מסך הבריאות הפיננסית — מצב כללי ׳בריא׳ ומפת מדדים' },
+    networth: { cap: '<b>הון</b> — השווי הנקי האמיתי: עו״ש, פיקדונות, תוכניות חיסכון והלוואות — כולל מה שאין בסנכרון, לאורך זמן.', alt: 'צילום מסך אמיתי של מסגרת: מסך ההון — שווי נקי, הרכב הנכסים ונזילות' }
+  };
+  var tabs = document.querySelectorAll('.tour-tab');
+  var img = document.getElementById('tourShotImg');
+  var link = document.getElementById('tourShotLink');
+  var live = document.getElementById('tourLive');
+  var cap = document.getElementById('tourCap');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var key = tab.getAttribute('data-tour');
+      tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t === tab)); });
+      img.src = 'shots/' + key + '.png';
+      img.alt = TOUR[key].alt;
+      link.href = 'demo/#/' + key;
+      live.href = 'demo/#/' + key;
+      cap.innerHTML = TOUR[key].cap;
+    });
+  });
+  /* preload the tour screenshots once idle, so switching is instant */
+  var preload = function(){
+    Object.keys(TOUR).forEach(function(key){ var i = new Image(); i.src = 'shots/' + key + '.png'; });
+  };
+  if ('requestIdleCallback' in window) requestIdleCallback(preload, { timeout: 4000 });
+  else setTimeout(preload, 2500);
 })();
 </script>
 </body>

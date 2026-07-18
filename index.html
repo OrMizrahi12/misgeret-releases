@@ -178,6 +178,15 @@ section{padding:96px 0}
 .demo-frame{position:relative}
 .demo-frame .mock{height:min(74vh,660px);display:flex;flex-direction:column}
 .demo-frame iframe{display:block;width:100%;border:0;flex:1;min-height:0}
+.demo-expand{display:inline-flex;align-items:center;gap:7px;background:var(--petrol);color:#fff;border:none;border-radius:999px;padding:6px 15px;font-family:var(--font);font-weight:700;font-size:12px;cursor:pointer;transition:background .16s,transform .16s}
+.demo-expand:hover{background:var(--petrol-deep);transform:translateY(-1px)}
+#demoBackdrop{position:fixed;inset:0;background:rgba(23,19,31,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:290;opacity:0;pointer-events:none;transition:opacity .25s}
+body.demo-open #demoBackdrop{opacity:1;pointer-events:auto}
+body.demo-open{overflow:hidden}
+.demo-frame.expanded{position:fixed;inset:min(3vh,26px) min(3vw,34px);z-index:300}
+.demo-frame.expanded .mock{height:100%;box-shadow:0 44px 130px -30px rgba(23,19,31,.6)}
+.demo-frame.expanded .try-callout{display:none}
+@media (max-width:680px){ .demo-frame.expanded{inset:0} .demo-frame.expanded .mock{border-radius:0} }
 .live-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(23,126,87,.1);color:var(--good);border:1px solid rgba(23,126,87,.3);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:800}
 .live-chip i{width:8px;height:8px;border-radius:50%;background:var(--good);animation:livePulse 1.6s ease-in-out infinite}
 @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(23,126,87,.45)}50%{box-shadow:0 0 0 6px rgba(23,126,87,0)}}
@@ -451,6 +460,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
 </head>
 <body>
 <a class="skip-link" href="#main">דלג לתוכן</a>
+<div id="demoBackdrop" aria-hidden="true"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-banknote" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
@@ -547,6 +557,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
               מסגרת
             </span>
             <span class="live-chip"><i aria-hidden="true"></i>דמו חי · נתוני דוגמה</span>
+            <button class="demo-expand" id="demoExpand" aria-pressed="false" aria-label="הרחבת הדמו לחלון מלא מעל האתר">⤢ הרחב למצב אמיתי</button>
             <span class="dots"><i></i><i></i><i></i></span>
           </div>
           <iframe src="demo/" title="דמו אינטראקטיבי של מסגרת — האפליקציה האמיתית עם נתוני דוגמה" loading="eager"></iframe>
@@ -1236,6 +1247,24 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   if (track) track.innerHTML += track.innerHTML;
 
   /* live demo renders immediately — no gate, no mystery click */
+
+  /* "הרחב למצב אמיתי": the SAME frame goes fixed-fullscreen via CSS only, so the
+     iframe never reloads and whatever the visitor was doing in the app survives */
+  var expandBtn = document.getElementById('demoExpand');
+  var backdrop = document.getElementById('demoBackdrop');
+  function setExpanded(on){
+    document.getElementById('demoFrame').classList.toggle('expanded', on);
+    document.body.classList.toggle('demo-open', on);
+    expandBtn.textContent = on ? '✕ חזרה לאתר' : '⤢ הרחב למצב אמיתי';
+    expandBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
+  if (expandBtn) {
+    expandBtn.addEventListener('click', function(){
+      setExpanded(!document.getElementById('demoFrame').classList.contains('expanded'));
+    });
+    backdrop.addEventListener('click', function(){ setExpanded(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setExpanded(false); });
+  }
 
   /* reveal on scroll */
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

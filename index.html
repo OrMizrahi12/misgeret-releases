@@ -274,6 +274,10 @@ body.demo-open{overflow:hidden}
 .jr-real .cam{color:var(--night-sun)}
 .jr-under .btn-ghost{background:transparent;color:var(--night-lav);border-color:rgba(159,127,255,.4)}
 .jr-under .btn-ghost:hover{background:rgba(159,127,255,.12)}
+/* mobile: each step carries its own app frame — nothing sticky, nothing covered */
+.jr-mini{display:none;background:var(--night-2);border:1px solid rgba(159,127,255,.32);border-radius:18px;overflow:hidden;box-shadow:0 24px 70px -28px rgba(0,0,0,.7);margin:2px 0 20px}
+.jr-mini .jr-bar{border-radius:0}
+.jr-mini img{display:block;width:100%;height:auto;background:#fff}
 
 /* ---------- capability wall ---------- */
 .cap-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 44px}
@@ -428,9 +432,9 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   .hero-grid{grid-template-columns:1fr;gap:56px}
   .hero-visual .peep-hello{display:none}
   .jr-grid{grid-template-columns:1fr;gap:0}
-  .jr-visual{order:-1;position:sticky;top:78px;z-index:5}
-  .jr-under{display:none}
-  .jr-step{min-height:60vh;padding:46px 0 26px}
+  .jr-visual{display:none}
+  .jr-mini{display:block}
+  .jr-step{min-height:0;padding:34px 0;opacity:1;transform:none}
   .privacy-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .conn-head{grid-template-columns:1fr;text-align:center}
@@ -458,11 +462,7 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
   .stat{padding:26px 10px}
   .stat:nth-child(3){border-inline-start:none}
   .journey{padding:76px 0 60px}
-  .jr-visual{top:70px}
-  .jr-step{min-height:56vh}
   .jr-step .desc{font-size:16px}
-  .jr-under{justify-content:center;text-align:center}
-  .jr-under .btn{width:100%}
   .steps,.dedup-strip{grid-template-columns:1fr}
   .steps{gap:34px}
   .privacy-panel{padding:52px 26px;border-radius:30px}
@@ -665,6 +665,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="month" data-label="איך אני החודש?">
           <span class="jr-tag">שאלה 1 · הטאב הראשון</span>
           <h3>״איך אני החודש?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">איך אני החודש?</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/month.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             מספר אחד ברור: <b>כמה מותר להוציא עד סוף החודש</b> — אחרי הקבועות שעוד ירדו והחיסכון שתכננת.
           </p>
@@ -679,6 +683,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="overview" data-label="איך אני בכללי?">
           <span class="jr-tag">שאלה 2 · הטאב השני</span>
           <h3>״איך אני בכללי?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">איך אני בכללי?</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/overview.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             מבט על חודשים ושנים: <b>כמה באמת נשאר בצד כל חודש</b> — מול הממוצע שלך, ומול החציון הישראלי.
           </p>
@@ -693,6 +701,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="future" data-label="ומה לגבי העתיד?">
           <span class="jr-tag">שאלה 3 · מבט קדימה</span>
           <h3>״ומה לגבי העתיד?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">ומה לגבי העתיד?</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/future.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             תחזית עד שנה קדימה, בנויה מהלוח האמיתי שלך <b>ומכוילת מול מה שבאמת קרה.</b> כל מספר ניתן לביקורת.
           </p>
@@ -707,6 +719,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="savings" data-label="חיסכונות">
           <span class="jr-tag">שאלה 4 · חיסכונות</span>
           <h3>״כמה כבר שמתי בצד?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">חיסכונות</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/savings.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             יעדים חיים בתוך התזרים: <b>ההפקדה המתוכננת יורדת מ״נשאר להוציא״</b> — החיסכון קודם, לא מה שנשאר במקרה.
           </p>
@@ -721,6 +737,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="health" data-label="בריאות פיננסית">
           <span class="jr-tag">שאלה 5 · בריאות</span>
           <h3>״עד כמה אני יציב באמת?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">בריאות פיננסית</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/health.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             12 מדדים לפי ספי המקצוע, בשני צירים — <b>רמה ועמידות</b> — וכל חישוב מוסבר עד הסוף. בלי ציונים סודיים.
           </p>
@@ -735,6 +755,10 @@ table.compare{width:100%;border-collapse:collapse;min-width:660px;font-size:15.5
         <div class="jr-step" data-tab="networth" data-label="הון">
           <span class="jr-tag">שאלה 6 · הון</span>
           <h3>״ומה אני שווה, בסך הכל?״</h3>
+          <div class="jr-mini" aria-hidden="true">
+            <span class="jr-bar"><span class="name">הון</span><span class="dots"><i></i><i></i><i></i></span></span>
+            <img src="shots/networth.png" width="2880" height="1800" loading="lazy" decoding="async" alt="">
+          </div>
           <p class="desc">
             השווי הנקי האמיתי שלך — <b>כולל מה שאין בסנכרון:</b> פיקדונות, הלוואות, ניירות ערך, גם במטבע זר.
           </p>

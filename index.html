@@ -138,9 +138,10 @@ section{padding:104px 0}
 
 /* ---------- hero ---------- */
 .hero{padding:88px 0 34px;overflow:visible;position:relative}
-.hero::before{content:'';position:absolute;top:-220px;inset-inline-end:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(91,43,224,.16),transparent 62%);pointer-events:none}
-.hero::after{content:'';position:absolute;top:40px;inset-inline-start:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.14),transparent 60%);pointer-events:none}
-.hero .container{position:relative;z-index:1}
+/* glows sit at z -1 so the hero keeps NO stacking context — the expanded demo
+   (position:fixed, z 300) must escape to root, above the blurred backdrop (z 290) */
+.hero::before{content:'';position:absolute;z-index:-1;top:-220px;inset-inline-end:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(91,43,224,.16),transparent 62%);pointer-events:none}
+.hero::after{content:'';position:absolute;z-index:-1;top:40px;inset-inline-start:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.14),transparent 60%);pointer-events:none}
 .hl-wrap{position:relative;display:inline-block}
 .hl-wrap .squig{position:absolute;inset-inline:2%;bottom:-12px;width:96%;height:12px}
 .hero-grid{display:grid;grid-template-columns:minmax(0,47fr) minmax(0,53fr);gap:52px;align-items:center}

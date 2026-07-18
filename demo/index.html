@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>מסגרת</title>
+    <script>
+      // theme boots before first paint — default is the brand's warm light
+      try {
+        var misgeretTheme = localStorage.getItem('misgeret-theme');
+        if (misgeretTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+      } catch (e) { /* storage unavailable — stay light */ }
+    </script>
+    <script type="module" crossorigin src="./assets/index-C9nbs8Hp.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CkNqzvwh.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
